@@ -1,0 +1,12 @@
+// Bebas Neue Book
+@font-face {
+  font-family: 'ProximaNova';
+  font-weight: $fw-regular;
+  font-style: normal;
+  src: url("../src/fonts/ProximaNova-Regular.eot?#iefix");
+  src: url("../src/fonts/ProximaNova-Regular.eot?#iefix") format("eot"),
+  url("../src/fonts/ProximaNova-Regular.woff2") format("woff2"),
+  url("../src/fonts/ProximaNova-Regular.woff") format("woff"),
+  url("../src/fonts/ProximaNova-Regular.ttf") format("truetype"),
+  url("../src/fonts/ProximaNova-Regular.svg") format("svg");
+}

@@ -1,0 +1,72 @@
+// include @button(button, big, dark, none);
+@mixin button (
+	$button-type: button, 
+	$button-size: big, 
+	$button-color: dark,
+  $image-src: none
+) {
+  border-radius: 30px;
+  cursor: pointer;
+
+  @if $button-type == button {
+    appearance: none;
+    border: none;
+  }
+
+  @if $button-type == link {
+    text-decoration: none;
+  }
+
+  @if $button-size == big {
+    padding: 22px 40px;
+  } 
+
+  @if $button-size == small {
+    padding: 7px 20px;
+  }
+
+  @if $button-size == image {
+    padding: 15px 25px 15px 85px;
+    background-image: url($image-src);
+    background-size: 50px;
+    background-position: center left 20px;
+    background-repeat: no-repeat;
+    text-align: left;
+
+    @include media($small down) {
+      background-size: 40px;
+      padding: 10px 15px 10px 65px;
+    }
+
+    &:hover {
+      background-image: url($image-src);
+    }
+
+    span {
+      display: block;
+    }
+  }
+
+  @if $button-color == dark {
+    background-color: $color--quinary;
+    color: $color--white;
+    transition: background-color 300ms ease;
+
+    &:hover {
+      background-color: darken($color--quinary, 10%);
+    }
+  }
+
+  @if $button-color == light {
+    background-color: transparent;
+    color: $color--darkGrey;
+    border: 1px solid $color--grey;
+    transition: border-color 300ms ease, background-color 300ms ease;
+
+    &:hover {
+      border-color: $color--primary;
+      background-color: $color--primary;
+      color: $color--white;
+    }
+  }
+}

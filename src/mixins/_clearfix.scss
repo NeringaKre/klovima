@@ -1,0 +1,12 @@
+/// How to use
+// @include clearfix;
+
+@mixin clearfix {
+  position: relative;
+
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}

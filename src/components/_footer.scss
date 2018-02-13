@@ -1,0 +1,220 @@
+.footer__first {
+	padding: 50px 15px 50px 25px;
+
+    @include media ($medium down) {
+    	display: block;
+    	padding: 20px 15px 20px 25px;
+    }
+
+    > p {
+    	display: inline-block;
+    	vertical-align: middle;
+    	width: 30%;
+
+    	@include media($large down) {
+    		display: block;
+ 			width: 100%;
+    	}
+    }
+
+	form {
+		display: inline-block;
+		vertical-align: middle;
+		width: 70%;
+
+		@include media ($large down) {
+			display: block;
+ 			width: 100%;
+		}
+
+		> p {
+			font-size: 1.15rem;
+
+			@include media ($full down) {
+				font-size: 1rem;
+			}
+		}
+
+		.footer__first--item {
+			display: inline-block;
+			margin-right: 50px;
+			font-size: 1rem;
+			border-color: $color--grey;
+
+			@include media ($full down) {
+				margin-right: 12px;
+
+				// Koel atskirai elementams prie mediju mazini font size kai 
+				// galima tvarkingai tai padaryti keiciant ant HTML, nes cia rem'ai
+				font-size: 0.9rem;
+			}
+
+			@include media ($large down) {
+				margin-bottom: 10px;
+				display: block;
+			}
+
+			@include media ($medium down) {
+				font-size: 0.85rem;
+			}
+
+			&:last-child{
+				margin-right: 0;
+			}
+			
+			> input {
+				background-color: white;
+			    border: 1px solid $color--grey;
+			    appearance: none;
+			    width: 15px;
+			    height: 15px;
+			    vertical-align: middle;
+			    margin: 0;
+			    margin-bottom: 5px;
+			    margin-right: 5px;
+			}
+		}
+
+		> input {
+			border-radius: 40px;
+   			padding: 8px 70px 8px 10px;
+    		border: 1px solid;
+    		text-align: left;
+
+    		@include media ($full down) {
+    			padding: 5px 70px 5px 10px;
+    		}
+		}
+	}
+}
+
+.footer__second {
+	background-color: $color--quaternary;
+	padding: 50px 15px 50px 25px;
+
+	@include media ($medium down) {
+    	padding: 20px 15px 20px 25px;
+    }
+
+	> p {
+		display: inline-block;
+		width: 30%;
+		font-size: 1.15rem;
+
+		@include media ($full down) {
+			width: 40%;
+		}
+
+		@include media ($large down) {
+			display: block;
+			width: 100%;
+		}
+
+		@include media ($small down) {
+			font-size: 1.05rem;
+		}
+	}
+}
+
+.footer__logos-wrapper {
+	display: inline-block;
+	width: 70%;
+	text-align: right;
+
+	@include media ($full down) {
+		width: 60%;
+	}
+
+	@include media ($large down) {
+		display: block;
+		width: 100%;
+		text-align: left;
+	}
+
+	img {
+		width: 10%;
+		margin-right: 60px;
+		display: inline-block;
+		vertical-align: middle;
+		height: auto;
+
+		@include media ($full down) {
+			width: 12%;
+			margin-right: 20px;
+		}
+
+		@include media ($small down) {
+			width: 30%;
+			margin-right: 5%;
+
+			&:nth-of-type(3) {
+				margin-right: 0;
+			}
+		}
+
+		&:last-of-type{
+			margin-right: 0;
+		}
+	}
+}
+
+.footer__third {
+	position: relative;
+	background-color: $color--quaternary;
+	padding: 30px 15px 70px 25px;
+	display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include media ($medium down) {
+    	padding: 20px 15px 20px 25px;
+    	display: block;
+    }
+
+	& .strong-footer {
+		text-decoration: underline;
+		text-decoration-color: rgba(181, 181, 181, 0.8);
+	}
+
+	&::before {
+		position: absolute;
+		top: 0;
+		content: "";
+		width: 97%;
+		height: 1px;
+		background-color: $color--pilka;
+	}
+
+	> p {
+		display: inline-block;
+		vertical-align: top;
+		font-size: 1.15rem;
+
+		@include media ($large down) {
+			font-size: 1rem;
+		}
+
+		@include media ($medium down) {
+			display: block;
+		}
+
+		&:last-of-type{
+			margin-right: 0;
+		}
+	}
+
+	&-facebook{
+		background-image: url("../src/images/facebook.png");
+		background-size: 9px;
+		background-repeat: no-repeat;
+		background-position: right;
+   	 	display: inline-block;
+    	padding-right: 15px;
+		vertical-align: top;
+		font-size: 1.15rem;
+
+		@include media ($large down) {
+			font-size: 1rem;
+		}
+	}
+}

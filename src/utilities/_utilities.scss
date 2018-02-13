@@ -1,0 +1,293 @@
+//all utilities included in this scss.
+.btn {
+  &__transparent {
+    &--big {
+      @include button(button, big, light, none);
+        padding: 18px 10px;
+        font-size: 1.1rem;
+        color: $color--white;
+
+        @include media ($large down) {
+		    margin-bottom: 20px;
+		}
+
+		@include media ($medium down) {
+		    padding: 12px 10px;
+		    font-size: 0.95rem;
+		}
+    }
+
+    &--image {
+      @include button(button, image, light, '../src/images/tractor.png');
+    }
+
+
+	&--small {
+		@include button(button, small,light);
+			padding: 5px 12px;
+			font-size: 0.8rem;
+
+			@include media ($medium down) {
+			}
+
+		// @include media ($full down) {
+		// 	padding: 6px 20px;
+		// }
+    }
+  }
+
+  &__red {
+    &--big {
+      @include button(button, big, dark, none);
+      	font-size: 1.1rem;
+
+      @include media ($medium down) {
+      	padding: 18px 12px;
+      	font-size: 0.95rem;
+      }
+    }
+
+    &--small {
+		@include button(button, small,dark);
+			font-size: 0.8rem;
+			margin-right: 15px;
+
+		@include media ($full down) {
+			padding: 6px 20px;
+      margin-right: 5px;
+		}
+
+		@include media ($large down) {
+			font-size: 0.85rem;
+      margin-bottom: 10px;
+		}
+    }
+  }
+}
+
+
+.buttons-wrapper {
+	// padding: 8px 2px; 
+  min-width: 210px;
+}
+
+input[type="text"] {
+	&::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  		color: $color--grey;
+	}
+
+	&::-moz-placeholder { /* Firefox 19+ */
+	  color: $color--grey;
+	}
+
+	&:-ms-input-placeholder { /* IE 10+ */
+	  color: $color--grey;
+	}
+
+	&:-moz-placeholder { /* Firefox 18- */
+	  color: $color--grey;
+	}
+}
+
+img {
+	width: 100%;
+	height: auto;
+}
+
+.telephone-ask {
+	  position: absolute;
+    right: -20px;
+    padding: 10px 60px 10px 25px;
+    margin-top: 30px;
+    text-align: right;
+    border-radius: 20px;
+    background-color: white;
+
+    @include media($medium down) {
+      position: static;
+      display: block;
+      border-radius: 0;
+      text-align: center;
+      padding: 10px 0;
+      margin: 15px 0 -50px 0;
+    }
+
+    > p{
+    	margin: 0;
+    	font-weight: bold;
+
+    	&:first-child {
+    		font-size: 0.8rem;
+    	}
+
+    	&:last-child {
+    		font-size: 1.5rem;
+    	}
+    }
+}
+
+
+.other-pages__arrow {
+	width: 20px;
+	margin: auto;
+	margin-bottom: 30px;
+	margin-top: 30px;
+}
+
+.isorinis {
+	&__heading {
+		  margin: auto;
+    	width: 50%;
+   		text-align: center;
+   		position: relative;
+
+      @include media($medium down) {
+        width: 100%;
+        padding: 0 20px;
+      }
+
+   		h1 {
+   			font-size: 3rem;
+    		font-weight: bold;
+    		margin-bottom: 10px;
+
+        @include media($medium down) {
+          font-size: 2.5rem;
+        }
+
+        @include media($small down) {
+          font-size: 2rem;
+        }
+   		}
+
+   		> p {
+   			font-size: 1.1rem;
+
+        @include media($medium down) {
+           margin: 10px 20px;
+        }
+   		} 
+	}
+}
+
+.paging {
+  display: block;
+  margin-top: 50px;
+  margin-bottom: 10px;
+
+  ul {
+      text-align: center;
+      padding: 0;
+
+      > li {
+        margin-right: 15px;
+        display: inline-block;
+
+        //varaible pavadinimas neteikiantis informacijos
+        // $color--lightestGrey
+        // $color--lightGrey
+        // $color--grey
+        // $color--darkGrey
+        // $color--darkerGrey
+        // $color--darkestGrey
+        // ect
+        color: $color--greyOther;
+        font-weight: bold;
+        width: 20px;
+
+        //netikiu kad negalima buvo apsieiti su graziais skaiciais, nepaisant 19px ir panasiai
+        // galima
+        padding: 2px 19px 2px 9px;
+        border-radius: 50%;
+
+      &.active {
+        background-color: $color--primary;
+          border-radius: 50%;
+
+          a {
+            color: $color--white;
+          }
+      }
+
+      &:last-child {
+        &.active {
+          background-color: transparent;
+        }
+      }
+
+      &:first-child {
+        padding: 2px 17px 2px 11px;
+      }
+      }
+  }
+
+  &--right-arrow {
+    a {
+      // background-image ikonoms o ne img tagas
+      > img {
+        width: 10px;
+      }
+    }
+  }
+}
+
+.news-date {
+  color: $color--grey;
+  font-size: 0.75rem;
+}
+
+.news-text {
+  font-size: 1rem;
+  font-weight: bold;
+  line-height: 25px;
+
+  @include media($large down) {
+    font-size: 0.95rem;
+  }
+
+  @include media($small down) {
+    font-size: 0.85rem;
+  }
+}
+
+
+.picture {
+  background-repeat: no-repeat;
+  padding-left: 30px;
+  margin: 0;
+
+  &.telephone {
+    background-image: url("../src/images/mobile-pic.png");
+    background-size: 12px;
+    background-position: center left 5px;
+    margin-bottom: 10px;
+  }
+
+  &.email {
+    background-image: url("../src/images/mail-pic.png");
+    background-size: 20px;
+    background-position: center left 0px;
+  }
+
+  &.location {
+    background-image: url("../src/images/location-pic.png");
+    background-size: 15px;
+    background-position: center left 3px;
+    margin-bottom: 10px;
+  }
+}
+
+.text-naujiena {
+    position: absolute;
+    top: -15px;
+    left: 30px;
+    background-color: $color--primary;
+    
+    p {
+      margin: 0;
+      padding: 5px 10px;
+      text-transform: uppercase;
+      color: $color--white;
+      font-weight: bold;
+    }
+}

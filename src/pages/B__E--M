@@ -1,0 +1,14 @@
+B__E--M
+
+B - pradine bloko ar puslapio (jei jis mazas) klase. Kaip kad tarkim class="registration-form"
+E - bloko elementas. Tarkim class="registration-form__title"
+M - modifyeris, naudojamas labai retai, dazniausiai spalvai, dydziui nustatyt. pvz class="registration-form__submit--green"
+
+Labai daug naudoji modifyeriu kur ju nereikia (elementams), per dideli puslapi nutari daryt kaip bloka, ir tada gaunasi dideli ir scss failai (skaitumumui ir suprantamumui zopa buna).
+
+Naudoji ta pacia klase ant labai daug elementu, kuomet butu uzteke ta klase uzdeti ant to pacio puslapyje page'o wrapperio pirmo. Dabar tiesiog uzfloodinta gavosi, kai viska apstylinti butu uzteke vienos.
+
+taisyti - nuomos isorini, pervezimas
+
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+

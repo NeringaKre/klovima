@@ -1,0 +1,131 @@
+// general code for html, body, regions
+
+.main {
+	&-section {
+		background-size: 100%;
+		background-repeat: no-repeat;
+		background-position: 50%;
+
+			@include media($large down) {
+		    	background-size: 135%;
+		    }
+
+		    @include media($medium down) {
+		    	background-size: 230%;
+		    }
+
+		    @include media($small down) {
+		    	background-size: 320%;
+		    }
+
+		&__first {
+		    background-image: url("../src/images/layer1.png");
+
+		    .main-section__info-block {
+		    	width: 45%;
+
+		    	@include media($full down) {
+			    	width: 65%;
+			    }
+
+		    	> h1 {
+		    		margin-bottom: 30px;
+		    	}
+		    }
+		}
+
+		&__second {
+		    background-image: url("../src/images/layer2.png");
+		}
+
+		&__third {
+		    background-image: url("../src/images/layer3.png");
+		}
+
+		&__fourth {
+		    background-image: url("../src/images/layer4.png");
+		}
+
+		&__fifth {
+		    background-image: url("../src/images/layer5.png");
+		}
+
+		&__sixth {
+		    background-image: url("../src/images/layer6.png");
+		}
+
+		&__seventh {
+		    background-image: url("../src/images/layer7.png");
+		}
+
+		&__info-block {
+		    position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			width: 70%;
+
+				@include media($full down) {
+			    	width: 70%;
+			    }
+
+			> h1 {
+				font-size: 4.4rem;
+		    	color: $color--white;
+		    	padding-left: 30px;
+		    	margin-bottom: 0;
+
+
+	    		@include media($full down) {
+			    	font-size: 3.8rem;
+			    }
+
+			    @include media($medium down) {
+			    	font-size: 2.8rem;
+			    }
+
+				@include media($small down) {
+			    	font-size: 2.2rem;
+			    }
+		    }
+
+		    > button {
+	    		margin-left: 30px;
+		    }
+
+		    > p {
+		    	color: white;
+		    	padding-left: 30px;
+		    	font-size: 1.15rem;
+		    	width: 60%;
+		    	margin-bottom: 40px;
+
+
+	    		@include media($full down) {
+			    	width: 90%;
+			    }
+
+			    @include media($medium down) {
+			    	width: 100%;
+			    }
+
+				@include media($small down) {
+			    	font-size: 1rem;
+			    	width: 120%;
+			    }
+		    }
+		}
+
+		&__arrow {
+			position: absolute;
+			bottom: 20px;
+			left: 50%;
+			transform: translateX(-50%);
+
+			// img{
+			// 	position: absolute;
+			// 	bottom: 20px;
+			// 	left: 50%;
+			// }
+		}
+	}
+}

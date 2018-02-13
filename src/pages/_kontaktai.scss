@@ -1,0 +1,108 @@
+.kontaktai {
+	margin: 10px 130px;
+
+	@include media($full down) {
+			margin: 10px 50px;
+		}
+
+		@include media($medium down) {
+			margin: 10px 20px;
+		}
+
+	.isorinis {
+		&__info-blocks {
+
+			> div {
+				background-color: $color--white;
+				margin-bottom: 30px;
+				padding: 0 30px 20px 30px;
+
+				@include media($medium down) {
+					padding: 1px 30px 20px 30px;
+				}
+
+			}
+
+			&--first-line {
+				display: inline-block;
+				vertical-align: top;
+				margin-right: 3%;
+				width: 48.5%;
+
+				@include media($medium down) {
+					display: block;
+					width: 70%;
+					margin: auto;
+				}
+
+				@include media($small down) {
+					width: 100%;
+				}
+
+				&:nth-child(2) {
+					margin-right: 0;
+
+					@include media ($medium down) {
+						margin-right: auto;
+					}
+				}
+
+				.paragraph-inline {
+					display: inline-block;
+					margin-right: 10px;
+				}
+
+				> div {
+					p {
+						display: inline-block;
+						width: 35%;
+						font-size: 1rem;
+						margin: 10px 0;
+
+						@include media($large down) {
+							display: block;
+							width: 100%;
+						}
+
+						&:last-child {
+							width: 65%;
+						}
+					}
+				}
+
+				.picture {
+					margin-bottom: 19px;
+				}
+			}
+
+			&--second-line {
+				display: inline-block;
+				width: 31.3%;
+				margin-right: 3%;
+				min-height: 146px;
+
+				@include media($medium down) {
+					display: block;
+					width: 70%;
+					margin: auto;
+				}
+
+				@include media($small down) {
+					width: 100%;
+				}
+
+				&:nth-child(5) {
+					margin-right: 0;
+
+					@include media ($medium down) {
+						margin-right: auto;
+					}
+				}
+
+				> p {
+					font-size: 1rem;
+				}
+			}
+		}
+	}
+}

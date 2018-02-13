@@ -1,0 +1,24 @@
+@mixin simple-grid {
+	width: 48.5%;
+	display: inline-block;
+	vertical-align: top;
+	background-color: $color--white;
+	margin-right: 3%;
+	margin-bottom: 35px;
+
+	@include media ($medium down) {
+		display: block;
+		width: 100%;
+	}
+
+	> div {
+		display: inline-block;
+		width: 50%;
+		vertical-align: top;
+
+		@include media($large down) {
+			display: block;
+			width: 100%;
+		}
+	}
+}

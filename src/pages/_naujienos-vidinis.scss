@@ -1,0 +1,101 @@
+.naujienos {
+	&.isorinis {
+		margin: 10px 130px;
+
+		@include media($full down) {
+			margin: 10px 50px;
+		}
+
+		@include media($medium down) {
+			margin: 10px 20px;
+		}
+	}
+
+	.isorinis {
+		&__news-block {
+			> p {
+				font-size: 1.2rem;
+				font-weight: bold;
+
+				@include media($medium down) {
+					font-size: 1rem;
+				}
+			}
+		}
+	}
+
+	&.vidinis {
+		background-color: $color--white;
+		margin-bottom: 35px;
+		padding-bottom: 15px;
+
+		> div {
+			display: inline-block;
+
+			@include media ($medium down) {
+				display: block;
+				width: 100%;
+			}
+		}
+	}
+
+	.vidinis {
+		&__photo-block {
+			width: 35%;
+
+			&--social {
+				padding: 0 30px;
+
+				> p {
+					font-size: 1rem;
+				}
+
+				ul {
+					padding: 0;
+
+					li {
+						display: inline-block;
+						margin-right: 10px;
+						width: 30px;
+						height: 30px;
+
+						&:last-child {
+							margin-right: 0;
+						}
+					}
+
+					.social {
+						background-size: 30px;
+						background-repeat: no-repeat;
+
+						&-facebook {
+							background-image: url('../src/images/facebook-button.svg');
+							background-size: 30px;
+							background-repeat: no-repeat;
+							cursor: pointer;
+						}
+
+						&-twitter {
+							background-image: url('../src/images/twitter-button.svg');
+							background-size: 30px;
+							background-repeat: no-repeat;
+							cursor: pointer;
+						}
+
+						&-linkedin {
+							background-image: url('../src/images/linkedin-button.svg');
+							background-size: 30px;
+							background-repeat: no-repeat;
+							cursor: pointer;
+						}
+					}
+				}
+			}
+		}
+
+		&__news-block {
+			width: 65%;
+			padding: 15px 30px;
+		}
+	}
+}

@@ -1,0 +1,72 @@
+@import './main-style';
+@import './navigation/navigation';
+@import './navigation/onepage-pagination';
+@import './footer';
+@import '../layout/layout';
+@import '../pages/nuoma-isorinis';
+@import '../pages/pervezimas-isorinis';
+@import '../pages/naujienos-isorinis';
+@import '../pages/naujienos-vidinis';
+@import '../pages/kontaktai';
+@import '../pages/technikos-nuoma';
+@import '../pages/technikos-nuoma-privalumai';
+// @include 'navigation/menu';
+// @include 'navigation/menu';
+
+// @include 'navigation/menu';
+// @include 'navigation/menu';
+// @include 'navigation/menu';
+
+// @include 'navigation/menu';
+// @include 'navigation/menu';
+// @include 'navigation/menu';
+
+// @include 'navigation/menu';
+// @include 'navigation/menu';
+// @include 'navigation/menu';
+
+// @include media($small up) {
+
+// }
+
+// @include media($small up, $large down) {
+	
+// }
+
+// @include media($small down) {
+	
+// }
+
+// @include grid(4, 3, 2, 1, 2%, div, top, $large, $medium, $small);
+
+// .povilas {
+//   display: block;
+// }
+
+// button {
+// 	&:nth-of-type(1) {
+// 		@include button(button, image, light, 'button-image1.svg');
+// 	}
+// 	&:nth-of-type(2) {
+// 		@include button(button, big, dark);
+// 	}
+// 	&:nth-of-type(3) {
+// 		@include button(button, small, light);
+// 	}
+// }
+
+// a {
+// 	&:nth-of-type(1) {
+// 		@include button(link, image, light, 'button-image1.svg');
+// 	}
+// 	&:nth-of-type(2) {
+// 		@include button(link, big, dark);
+// 	}
+// 	&:nth-of-type(3) {
+// 		@include button(link, small, light);
+// 	}
+// }
+
+// section {
+//   @include grid(3, 3, 2, 1, 2%, p, top);
+// }
