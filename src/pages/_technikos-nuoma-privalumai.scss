@@ -1,0 +1,36 @@
+.technikos-nuoma {
+	.isorinis {
+		&__privalumai {
+			background-color: $color--white;
+
+			div {
+				.paragraph {
+					&--red {
+						color: red;
+					}
+				}
+			}
+
+			button {
+				background-image: url("../src/images/right-arrow-pic.svg");
+				background-size: 11px;
+				background-repeat: no-repeat;
+    			background-position: center right 25%;
+    			padding: 15px 40px 15px 30px;
+    			font-size: 1.2rem;
+			}
+
+			.transparent-div {
+				p {
+
+background: linear-gradient(330deg, #e05252 0%, #99e052 25%, #52e0e0 50%, #9952e0 75%, #e05252 100%);
+
+-webkit-background-clip: text;
+
+-webkit-text-fill-color: transparent;
+
+				}
+			}
+		}
+	}
+}

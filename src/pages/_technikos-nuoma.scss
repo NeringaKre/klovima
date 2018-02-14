@@ -9,6 +9,120 @@
 		@include media($medium down) {
 			margin: 10px 20px;
 		}
+
+		.advantages-table {
+			margin-bottom: 60px;
+			background-color: $color--white;
+
+			&__column {
+				display: inline-block;
+				vertical-align: top;
+				margin: 0;
+				padding-bottom: 30px;
+
+				ul {
+					list-style: none;
+					padding: 0;
+
+					li {
+						color: $color--greyOther;
+						font-weight: bold;
+						font-size: 1.1rem;
+						padding: 10px;
+
+						&:nth-child(2n-1) {
+							background-color: $color--lightestGrey;
+						}
+					}
+				}
+
+				h3 {
+					text-align: center;
+    				padding: 10px 0;
+    				text-transform: uppercase;
+    				font-weight: bold;
+    				font-size: 1.5rem;
+				}
+
+				&.first-column {
+					width: 50%;
+					padding-left: 30px;
+
+					h3 {
+						background-image: url("../src/images/combain.png");
+						background-repeat: no-repeat;
+						background-size: 12%;
+    					background-position: center left 70px;
+    					color: $color--greyOther;
+					}
+
+					li {
+						padding-left: 20px;
+					}
+				}
+
+				&.second-column {
+					width: 25%;
+					outline: 5px solid green;
+					position: relative;
+					padding-bottom: 0;
+
+					h3 {
+						color: $color--green;
+					}
+
+					ul {
+						text-align: center;
+
+						li {
+							color: $color--green;
+							background-image: url("../src/images/tick.svg");
+							background-size: 10px;
+						    background-repeat: no-repeat;
+						    background-position: center left 37%;
+						    position: relative;
+						}
+					}
+				}
+
+				&.third-column {
+					width: 25%;
+					padding-right: 30px;
+
+					h3 {
+						color: $color--red;
+					}
+
+					ul {
+						text-align: center;
+
+						li {
+							color: $color--red;
+							background-image: url("../src/images/cross.svg");
+						    background-size: 7px;
+						    background-repeat: no-repeat;
+						    background-position: center left 40%;
+						}
+					}
+				}
+			}
+
+			button {
+				background-image: url("../src/images/right-arrow-pic.svg");
+				background-size: 10px;
+    			background-repeat: no-repeat;
+    			background-position: center right 25px;
+    			background-color: $color--green;
+    			margin-left: 50%;
+			    margin-bottom: 30px;
+			    font-size: 1.5rem;
+			    padding: 15px 40px;
+
+    			&:hover {
+    				background-color: darken($color--green,10%);
+    			}
+			}
+		}
 	}
 
 	.isorinis {
@@ -99,6 +213,6 @@
 	}
 }
 
-.technika {
-	background-image: url("../src/images/technikos-nuoma-pic.png");
-}
+// .technika {
+// 	background-image: url("../src/images/technikos-nuoma-pic.png");
+// }

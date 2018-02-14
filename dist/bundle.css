@@ -1748,6 +1748,82 @@ nav {
   @media screen and (max-width: 768px) {
     .technikos-nuoma.isorinis {
       margin: 10px 20px; } }
+  .technikos-nuoma.isorinis .advantages-table {
+    margin-bottom: 60px;
+    background-color: #FFFFFF; }
+    .technikos-nuoma.isorinis .advantages-table__column {
+      display: inline-block;
+      vertical-align: top;
+      margin: 0;
+      padding-bottom: 30px; }
+      .technikos-nuoma.isorinis .advantages-table__column ul {
+        list-style: none;
+        padding: 0; }
+        .technikos-nuoma.isorinis .advantages-table__column ul li {
+          color: #808080;
+          font-weight: bold;
+          font-size: 1.1rem;
+          padding: 10px; }
+          .technikos-nuoma.isorinis .advantages-table__column ul li:nth-child(2n-1) {
+            background-color: #f2f2f2; }
+      .technikos-nuoma.isorinis .advantages-table__column h3 {
+        text-align: center;
+        padding: 10px 0;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 1.5rem; }
+      .technikos-nuoma.isorinis .advantages-table__column.first-column {
+        width: 50%;
+        padding-left: 30px; }
+        .technikos-nuoma.isorinis .advantages-table__column.first-column h3 {
+          background-image: url("../src/images/combain.png");
+          background-repeat: no-repeat;
+          background-size: 12%;
+          background-position: center left 70px;
+          color: #808080; }
+        .technikos-nuoma.isorinis .advantages-table__column.first-column li {
+          padding-left: 20px; }
+      .technikos-nuoma.isorinis .advantages-table__column.second-column {
+        width: 25%;
+        outline: 5px solid green;
+        position: relative;
+        padding-bottom: 0; }
+        .technikos-nuoma.isorinis .advantages-table__column.second-column h3 {
+          color: #339900; }
+        .technikos-nuoma.isorinis .advantages-table__column.second-column ul {
+          text-align: center; }
+          .technikos-nuoma.isorinis .advantages-table__column.second-column ul li {
+            color: #339900;
+            background-image: url("../src/images/tick.svg");
+            background-size: 10px;
+            background-repeat: no-repeat;
+            background-position: center left 37%;
+            position: relative; }
+      .technikos-nuoma.isorinis .advantages-table__column.third-column {
+        width: 25%;
+        padding-right: 30px; }
+        .technikos-nuoma.isorinis .advantages-table__column.third-column h3 {
+          color: #B82930; }
+        .technikos-nuoma.isorinis .advantages-table__column.third-column ul {
+          text-align: center; }
+          .technikos-nuoma.isorinis .advantages-table__column.third-column ul li {
+            color: #B82930;
+            background-image: url("../src/images/cross.svg");
+            background-size: 7px;
+            background-repeat: no-repeat;
+            background-position: center left 40%; }
+    .technikos-nuoma.isorinis .advantages-table button {
+      background-image: url("../src/images/right-arrow-pic.svg");
+      background-size: 10px;
+      background-repeat: no-repeat;
+      background-position: center right 25px;
+      background-color: #339900;
+      margin-left: 50%;
+      margin-bottom: 30px;
+      font-size: 1.5rem;
+      padding: 15px 40px; }
+      .technikos-nuoma.isorinis .advantages-table button:hover {
+        background-color: #226600; }
 
 .technikos-nuoma .isorinis__info-block {
   background-color: white;
@@ -1806,8 +1882,21 @@ nav {
         .technikos-nuoma .isorinis__info-block--label > div p {
           font-size: 1rem; } }
 
-.technika {
-  background-image: url("../src/images/technikos-nuoma-pic.png"); }
+.technikos-nuoma .isorinis__privalumai {
+  background-color: #FFFFFF; }
+  .technikos-nuoma .isorinis__privalumai div .paragraph--red {
+    color: red; }
+  .technikos-nuoma .isorinis__privalumai button {
+    background-image: url("../src/images/right-arrow-pic.svg");
+    background-size: 11px;
+    background-repeat: no-repeat;
+    background-position: center right 25%;
+    padding: 15px 40px 15px 30px;
+    font-size: 1.2rem; }
+  .technikos-nuoma .isorinis__privalumai .transparent-div p {
+    background: linear-gradient(330deg, #e05252 0%, #99e052 25%, #52e0e0 50%, #9952e0 75%, #e05252 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; }
 
 .btn__transparent--big {
   border-radius: 30px;
