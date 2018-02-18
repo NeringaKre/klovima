@@ -1,0 +1,110 @@
+.nuoma-vidinis {
+	&.isorinis {
+		margin: 10px 130px;
+
+		@include media($full down) {
+			margin: 10px 50px;
+		}
+
+		@include media($medium down) {
+			margin: 10px 20px;
+		}
+	}
+
+	.isorinis {
+		&__models-block {
+			background-color: $color--white; 
+
+			&--product-images {
+				display: inline-block;
+				vertical-align: top;
+				width: 45%;
+			}
+
+			&--product-info {
+				display: inline-block;
+				vertical-align: top;
+				width: 55%;
+				padding-left: 30px;
+				padding-right: 30px;
+
+				@include media($large down) {
+					display: block;
+					width: 100%;
+				}
+
+				ul {
+					display: inline-block;
+					width: 50%;
+					vertical-align: top;
+					list-style: none;
+					padding: 0;
+					font-weight: bold;
+
+					li {
+						padding: 5px 0;
+						font-size: 1rem;
+						border-bottom: 1px solid $color--lightestGrey;
+
+						@include media ($small down) {
+							font-size: 0.8rem;
+						}
+
+						&:last-child {
+							border-bottom: none;
+						}
+					}
+				}
+
+				.model-label {
+					color: $color--greyOther;
+				}
+
+				.model-value {
+					color: $color--darkGrey;
+
+					li {
+						&:last-child {
+							font-weight: normal;
+						}
+					}
+				}
+
+				> div {
+					text-align: right;
+    				margin: 40px 0;
+
+    				@include media($small down) {
+    					margin: 0;
+    					padding-bottom: 10px;
+    				}
+
+    				button {
+    					padding: 13px 20px;
+
+    					@include media($small down) {
+    						padding: 8px 15px;
+    					}
+    				}
+				}
+			}
+		}
+
+		&__heading {
+			> p {
+				display: inline-block;
+				background-image: svg-load('right-arrow-pic.svg');
+				padding-right: 15px;
+				background-size: 6px;
+			    background-repeat: no-repeat;
+			    background-position: center right 4px;
+
+			    &:nth-child(4) {
+			    	background-image: none;
+			    	font-weight: bold;
+			    	font-size: 1rem;
+			    }
+			}
+		}
+	}
+}

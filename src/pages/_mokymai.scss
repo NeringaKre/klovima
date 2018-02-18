@@ -1,0 +1,294 @@
+.mokymai {
+	&.isorinis {
+		margin: 10px 130px;
+
+		@include media($full down) {
+			margin: 10px 50px;
+		}
+
+		@include media($medium down) {
+			margin: 10px 20px;
+		}
+	}
+
+	.isorinis {
+		&__models-block {
+			div {
+				background-color: $color--white;
+				padding: 30px 70px;
+				margin-bottom: 30px;
+
+				@include media($medium down) {
+					padding: 10px 20px;
+				}
+			}
+
+			&-about {
+				h3 {
+					display: inline-block;
+					vertical-align: middle;
+					width: 70%;
+					font-size: 1.4rem;
+					padding-right: 60px;
+
+					@include media($full down) {
+						font-size: 1.1rem;
+					}
+
+					@include media($medium down) {
+						font-size: 1rem;
+						padding-right: 20px;
+					}
+
+					@include media($small down) {
+						display: block;
+						width: 100%;
+						padding-right: 0;
+					}
+				}
+
+				button {
+					display: inline-block;
+					vertical-align: middle;
+					width: 30%;
+					padding: 15px 30px;
+
+					@include media($full down) {
+						font-size: 1rem;
+					}
+
+					@include media($large down) {
+						padding: 10px 15px;
+					}
+
+					@include media($medium down) {
+						font-size: 0.9rem;
+						margin: auto;
+					}
+
+					@include media($small down) {
+						display: block;
+						width: 60%;
+						margin-bottom: 10px;
+					}
+				}
+			}
+
+			&-answers {
+
+				h3 {
+					@include media($medium down) {
+						font-size: 1rem;
+					}
+				}
+
+				ul {
+					display: inline-block;
+					vertical-align: top;
+					width: 65%;
+					list-style: none;
+					padding: 0;
+
+					&:nth-child(2) {
+						width: 35%;
+
+						li {
+							color: $color--darkGrey;
+							padding-right: 30px;
+						}
+					}
+
+					@include media($small down) {
+
+					}
+
+					li {
+						border-bottom: 1px solid $color--lightestGrey;
+						color: $color--greyOther;
+						font-size: 1rem;
+						font-weight: bold;
+						padding: 10px 0;
+
+						&:last-child {
+							border-bottom: none;
+						}
+
+						@include media($medium down) {
+							font-size: 0.9rem;
+						}
+					}
+				}
+			}
+
+			&-beginning {
+				display: inline-block;
+				vertical-align: top;
+				width: 48.5%;
+				margin-right: 3%;
+				counter-reset: numeracija;
+
+				@include media($large down) {
+					display: block;
+					width: 100%;
+				}
+
+				h3 {
+					@include media($medium down) {
+						font-size: 1rem;
+					}
+				}
+
+				p {
+					position: relative;
+					padding-left: 60px;
+					padding-bottom: 20px;
+
+					@include media($medium down) {
+						font-size: 0.95rem;
+						padding-left: 40px;
+						padding-bottom: 10px;
+					}
+
+					&:before {
+						content: counter(numeracija);
+						counter-increment: numeracija;
+						position: absolute;
+					    top: 0px;
+					    left: 0;
+					    background-color: $color--red;
+					    padding: 9px 17px;
+					    border-radius: 20px;
+					    color: $color--white;
+
+					    @include media($medium down) {
+					    	padding: 4px 12px;
+					    }
+					}
+				}
+			}
+
+			&-registration {
+				display: inline-block;
+				vertical-align: top;
+				width: 48.5%;
+				@include clearfix;
+
+				@include media($large down) {
+					display: block;
+					width: 100%;
+				}
+
+				h3 {
+					@include media($medium down) {
+						font-size: 1rem;
+					}
+				}
+
+				form {
+					p {
+						margin: 20px 0 5px 0;
+						font-size: 0.9rem;
+					}
+
+					input {
+						appearance: none;
+						width: 100%;
+   						padding: 10px;
+   						border: 1px solid $color--lightestGrey;
+					}
+
+					select {
+						appearance: none;
+					    padding: 10px;
+					    width: 100%;
+					    border: 1px solid $color--lightestGrey;
+					    color: $color--darkGrey;
+					    background-image: svg-load("down-arrow-small.svg");
+					    background-size: 17px;
+					    background-position: center right 10px;
+					    background-repeat: no-repeat;
+
+					    option {
+					    	padding: 5px 0;
+					    }
+					}
+
+					textarea {
+				    	appearance: none;
+					    padding: 10px;
+					    width: 100%;
+					    border: 1px solid $color--lightestGrey;
+					    color: $color--darkGrey;
+					    height: 100px;
+					    resize: none;
+					    font-size: 0.9rem;
+					}
+				}
+
+				button {
+				    float: right;
+				    padding: 12px 25px;
+				    font-size: 0.8rem;
+				    margin-top: 30px;
+				}
+			}
+		}
+
+		&__heading {
+			width: 100%;
+
+			a {
+				display: inline-block;
+    			text-transform: uppercase;
+    			margin-right: 30px;
+    			position: relative;
+    			font-weight: bold;
+    			margin-bottom: 20px;
+
+    			@include media($large down) {
+    				margin-right: 0;
+    				display: block;
+    			}
+
+    			p {
+    				font-size: 1rem;
+
+    				@include media($large down) {
+    					font-size: 0.9rem;
+    				}
+
+    				@include media($small down) {
+    					font-size: 0.8rem;
+    				}
+    			}
+
+    			&:last-child {
+    				margin-right: 0;
+
+    				&:after {
+    					content: none;
+    				}
+    			}
+
+    			&:after {
+				    position: absolute;
+				    top: 18px;
+				    right: -15px;
+				    content: '';
+				    width: 1px;
+				    height: 20px;
+				    background-color: $color--darkGrey;
+
+				    @include media($large down) {
+						content: none;
+    				}
+    			}
+			}
+
+			.active {
+				color: $color--red;
+			}
+		}
+	}
+}
+

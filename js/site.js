@@ -48,13 +48,23 @@ $(document).ready(function(){
   });
 
     $('.language-menu').click(function() {
-         $('.language-menu li').toggle("");
+      $('.language-menu li').toggle("");
     });
 
     $('.paging ul li').click(function() {
-         $('.paging ul li').removeClass("active");
-         $(this).addClass("active");
+      $('.paging ul li').removeClass("active");
+      $(this).addClass("active");
     });
+
+
+    $('.mokymai .isorinis__heading a p').click(function() {
+      $('.mokymai .isorinis__heading a p').removeClass("active");
+      $(this).addClass("active");
+    });
+
+    $(document).ready(function() {
+      $(".select").find("option").eq(0).remove();
+  });
 
 // $(function () {
 //   $('body').on('click', function () {

@@ -1,34 +1,86 @@
 .technikos-nuoma {
 	.isorinis {
 		&__privalumai {
+			position: relative;
 			background-color: $color--white;
+			padding: 20px 50px;
+    		margin-bottom: 60px;
+
+    		@include media($medium down) {
+    			padding: 10px 20px;
+    		}
+
+    		&:after {
+    			position: absolute;
+    			bottom: 0;
+    			left: 0;
+    			content: '';
+    			width: 40%;
+    			height: 5px;
+    			background-color: $color--red;
+    		}
+
+    		.paragraph--numbers {
+    			margin-bottom: 30px;
+    		}
+
+			p {
+				font-weight: bold;
+				font-size: 1.4rem;
+				margin: 5px 0;
+
+				@include media($medium down) {
+					font-size: 1rem;
+				}
+			}
+
+			span {
+				font-size: 1.3rem;
+
+				@include media($medium down) {
+					font-size: 1rem;
+				}
+			}
 
 			div {
 				.paragraph {
 					&--red {
-						color: red;
+						color: $color--red;
 					}
 				}
 			}
 
 			button {
-				background-image: url("../src/images/right-arrow-pic.svg");
+				background-image: svg-load('right-arrow-pic.svg', 'fill:' $color--white);
 				background-size: 11px;
-				background-repeat: no-repeat;
+		  		background-repeat: no-repeat;
     			background-position: center right 25%;
     			padding: 15px 40px 15px 30px;
     			font-size: 1.2rem;
+    			margin: 35px 0;
+
+    			@include media($medium down) {
+    				padding: 10px 30px 10px 20px;
+					margin: 10px 0;
+					font-size: 1rem;
+    			}
 			}
 
 			.transparent-div {
-				p {
+				margin-bottom: 40px;
 
-background: linear-gradient(330deg, #e05252 0%, #99e052 25%, #52e0e0 50%, #9952e0 75%, #e05252 100%);
+				.paragraph {
+					&--grey {
+						background: linear-gradient(180deg, lighten($color--lightGrey, 20%) 0%, lighten($color--lightGrey, 25%) 25%, lighten($color--lightGrey, 40%) 50%);
+						-webkit-background-clip: text;
+						-webkit-text-fill-color: transparent;;
+					}
 
--webkit-background-clip: text;
-
--webkit-text-fill-color: transparent;
-
+					&--none {
+						background: linear-gradient(180deg, lighten($color--lightGrey, 30%) 0%, lighten($color--lightGrey, 40%) 25%, lighten($color--lightGrey, 45%) 50%, $color--white 100%);
+						-webkit-background-clip: text;
+						-webkit-text-fill-color: transparent;
+					}
 				}
 			}
 		}
