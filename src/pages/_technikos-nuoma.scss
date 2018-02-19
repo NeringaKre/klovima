@@ -5,24 +5,30 @@
 			&__header-img {
 				position: absolute;
 			    left: 0;
-			    top: 84px;
+			    top: 77px;
 			    width: 100%;
-			    height: 320px;
+			    height: 390px;
 			    background-image: url('../src/images/technikos-nuoma-pic.png');
 			    background-repeat: no-repeat;
 			    background-position: center;
+
+			    @include media($large down) {
+			    	top: 40px;
+			    }
 			}
 		}
 
 		margin: 10px 130px;
-		margin-top: 340px;
+		margin-top: 430px;
 
 		@include media($full down) {
-			margin: 10px 50px;
+		 	margin-left: 50px;
+		 	margin-right: 50px;
 		}
 
 		@include media($medium down) {
-			margin: 10px 20px;
+		 	margin-left: 10px;
+		 	margin-right: 10px;
 		}
 
 		&__heading {
@@ -70,16 +76,57 @@
 					width: 50%;
 					padding-left: 30px;
 
+					@include media($full down) {
+						width: 55%;
+					}
+
+					@include media($large down) {
+						width: 70%;
+						padding-left: 0;
+					}
+
 					h3 {
 						background-image: url("../src/images/combain.png");
 						background-repeat: no-repeat;
-						background-size: 12%;
-    					background-position: center left 70px;
+						background-size: 45px;
+    					background-position: center left 20px;
     					color: $color--greyOther;
+    					text-align: left;
+   						padding-left: 100px;
+
+   						@include media($large down) {
+						    margin: 0;
+						    padding: 65px 0 20px 90px;
+						    font-size: 1rem;
+						    height: 150px;
+						}
+
+						// @include media(($large - 124px) down) {
+						//     padding: 65px 0 20px 90px;
+						// }
+
+
+
+						@include media($small down) {
+							padding: 67px 15px 46px 75px;
+							font-size: 0.8rem;
+						}
 					}
 
 					li {
 						padding-left: 20px;
+
+						@include media($full down) {
+							font-size: 1rem;
+						}
+
+						@include media($medium down) {
+							font-size: 0.9rem;
+						}
+
+						@include media($small down) {
+							font-size: 0.7rem;
+						}
 					}
 				}
 
@@ -89,8 +136,44 @@
 					position: relative;
 					padding-bottom: 0;
 
+					@include media($full down) {
+						width: 23%;
+					}
+
+					@include media($large down) {
+						width: 15%;
+					}
+
+					@include media($medium down) {
+						outline: 2px solid green;
+					}
+
+
 					h3 {
 						color: $color--green;
+
+						@include media($large down) {
+						    writing-mode: vertical-lr;
+						    margin: 0;
+						    padding: 20px;
+						    font-size: 1.1rem;
+						    height: 150px;
+						    padding: 20px 55px;
+						}
+
+						@include media(($large - 124px) down) {
+						    padding: 20px 45px;
+						}
+
+						@include media($medium down) {
+							padding: 20px 30px;
+						}
+
+						@include media($small down) {
+							font-size: 0.8rem;
+							padding: 15px;
+							padding: 20px;
+						}
 					}
 
 					ul {
@@ -103,6 +186,23 @@
 						    background-repeat: no-repeat;
 						    background-position: center left 37%;
 						    position: relative;
+
+						    @include media($full down) {
+								font-size: 1rem;
+							}
+
+							@include media($large down) {
+								background-position: center left 30%;
+							}
+
+							@include media($medium down) {
+								background-image: none;
+								font-size: 0.9rem;
+							}
+
+							@include media($small down) {
+								font-size: 0.7rem;
+							}
 						}
 					}
 				}
@@ -111,8 +211,38 @@
 					width: 25%;
 					padding-right: 30px;
 
+					@include media($full down) {
+						width: 22%;
+					}
+
+					@include media($large down) {
+						width: 15%;
+						padding-right: 0;
+					}
+
 					h3 {
 						color: $color--red;
+
+						@include media($large down) {
+						    writing-mode: vertical-lr;
+						    height: 150px;
+						    margin: 0;
+						    padding: 35px 55px;
+						    font-size: 1.1rem;
+						}
+
+						@include media(($large - 124px) down) {
+						    padding: 20px 45px;
+						}
+
+						@include media($medium down) {
+							padding: 20px 30px;
+						}
+
+						@include media($small down) {
+							font-size: 0.8rem;
+							padding: 20px;
+						}
 					}
 
 					ul {
@@ -123,7 +253,24 @@
 							background-image: url("../src/images/cross.svg");
 						    background-size: 7px;
 						    background-repeat: no-repeat;
-						    background-position: center left 40%;
+						    background-position: center left 38%;
+
+						    @include media($full down) {
+								font-size: 1rem;
+							}
+
+							@include media($large down) {
+								background-position: center left 30%;
+							}
+
+							@include media($medium down) {
+								background-image: none;
+								font-size: 0.9rem;
+							}
+
+							@include media($small down) {
+								font-size: 0.7rem;
+							}
 						}
 					}
 				}
@@ -136,12 +283,29 @@
     			background-position: center right 25px;
     			background-color: $color--green;
     			margin-left: 50%;
-			    margin-bottom: 30px;
+			    margin-top: 20px;
+    			margin-bottom: 50px;
 			    font-size: 1.5rem;
 			    padding: 15px 40px;
 
     			&:hover {
     				background-color: darken($color--green,10%);
+    			}
+
+    			@include media($large down) {
+    				background-position: center right 15px;
+    				font-size: 1.2rem;
+    				padding: 10px 30px;
+    			}
+
+    			@include media($medium down) {
+    				background-size: 7px;
+    				background-position: center right 10px;
+    				font-size: 0.9rem;
+    				padding: 5px 20px;
+    				margin-left: 35%;
+    				margin-top: 0;
+    				margin-bottom: 20px;
     			}
 			}
 		}
@@ -150,6 +314,7 @@
 	.isorinis {
 
 		&__heading {
+			    margin-top: 130px;
 		    h1 {
 		    	color: $color--white;
 		    }

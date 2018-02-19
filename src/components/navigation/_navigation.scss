@@ -3,7 +3,11 @@
 nav {
 	display: block;
 	background-color: $color--primary;
-  padding: 0 15px;
+  padding: 0 15px 0 25px;
+
+  @include media($large down) {
+    padding: 0 15px 0 5px;
+  }
 
   @include media ($medium down) {
     padding: 11px 15px; 
@@ -48,7 +52,7 @@ nav {
   &__menu {
     display: inline-block;
     vertical-align: middle;
-    width: calc(100% - 190px);
+    width: calc(100% - 210px);
 
     @include media ($full down) {
       padding-left: 5px;
@@ -71,15 +75,15 @@ nav {
     > li {
       position: relative;
       padding-right: 15px;
-      margin-left: 10px;
+      margin-left: 16px;
       display: inline-block;
       vertical-align: middle;
-      // kodel procentais, o ne pikseliais
-      margin-right: 2%;
+      margin-right: 15px;
+      font-size: 1.1rem;
 
       @include media($full down) {
         padding-right: 10px;
-        margin-left: 5px;
+        margin-left: 3px;
         font-size: 1rem;
       }
 
@@ -109,7 +113,7 @@ nav {
           }
 
           &:hover {
-            background-image: svg-load('down-arrow.svg');
+            background-image: svg-load('down-arrow.svg', 'fill:' $color--white );
           }
         }
 
@@ -118,6 +122,12 @@ nav {
         }
 
         > a {
+          // font-size: 1.1rem;
+
+          // @include media($large down) {
+          //   font-size: 0.85rem;
+          // }
+
           @include media($medium down) {
             position: relative;
             display: inline-block;
@@ -148,7 +158,7 @@ nav {
 
             &::after {
               @include media($medium down) {
-                background-image: svg-load('down-arrow.svg');
+                background-image: svg-load('down-arrow.svg', 'fill:' $color--white);
               }
             }
           }
@@ -158,13 +168,17 @@ nav {
       // kas per skaitomumas, kaip nustatyt, kieno cia before'as yra?
       &::before {
         position: absolute;
-        top: 27px;
-        right: -10px;
+        top: 32px;
+        right: -11px;
         content: "";
         background-color: white;
         opacity: 0.3;
         width: 1px;
-        height: 30px;
+        height: 20px;
+
+        @include media ($full down) {
+          right: -7px;
+        }
 
         @include media ($large down) {
           content: none;
@@ -179,7 +193,7 @@ nav {
 
       > a {
         display: block;
-        padding: 30px 0;
+        padding: 30px 0 29px 0;
 
         @include media ($large down) {
           padding: 13px 0;
@@ -292,7 +306,7 @@ nav {
 
   li {
     display: none;
-    font-size: 0.8rem;
+    font-size: 0.75rem;
 
     &.language-menu__active {
       display: block;

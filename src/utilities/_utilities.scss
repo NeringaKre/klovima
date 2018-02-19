@@ -105,12 +105,13 @@ img {
     z-index: 10;
 
     @include media($medium down) {
-      position: static;
+      position: relative;
       display: block;
       border-radius: 0;
       text-align: center;
       padding: 10px 0;
-      margin: 15px 0 -50px 0;
+      margin: -5px 0 -50px 0;
+      right: 0;
     }
 
     > p{
