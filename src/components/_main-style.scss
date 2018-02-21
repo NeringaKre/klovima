@@ -76,7 +76,11 @@ td {
 h1 {
 	font-size: 3.8rem;
 	color: $color--darkGrey;
-	margin-top: 70px;
+	margin-top: 0;
+
+	@include media($medium down) {
+		padding-top: 30px;
+	}
 }
 
 h2 {

@@ -1,13 +1,14 @@
 .kontaktai {
-	margin: 10px 130px;
+	padding-top: 70px;
+	padding-bottom: 30px;
 
-	@include media($full down) {
-			margin: 10px 50px;
-		}
+	@include media($large down) {
+	  padding-top: 50px;
+	}
 
-		@include media($medium down) {
-			margin: 10px 20px;
-		}
+	@include media($medium down) {
+	  padding-top: 30px;
+	}
 
 	.isorinis {
 		&__info-blocks {
@@ -53,11 +54,14 @@
 				}
 
 				> div {
+					margin-bottom: 20px;
+
 					p {
 						display: inline-block;
-						width: 35%;
+						vertical-align: top;
+						width: 40%;
 						font-size: 1rem;
-						margin: 10px 0;
+						margin: 0;
 
 						@include media($large down) {
 							display: block;
@@ -65,13 +69,13 @@
 						}
 
 						&:last-child {
-							width: 65%;
+							width: 60%;
 						}
 					}
 				}
 
 				.picture {
-					margin-bottom: 19px;
+					margin-bottom: 20px;
 				}
 			}
 

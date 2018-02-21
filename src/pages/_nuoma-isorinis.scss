@@ -1,19 +1,41 @@
 // klase nieko nepasakanti, galejo buti pavyzdziui main-section__without-image ar kazkas panasaus
 .other-pages {
+	position: relative;
 	background-image: none; 
 	background-color: $color--quaternary;
+	max-width: 1020px;
+	margin: auto;
+
+	&::after,
+	&::before {
+		position: absolute;
+		top: 0;
+		width: 2000px;
+		height: 100%;
+		content: "";
+		background-color: $color--quaternary;
+	}
+
+	&::after {
+		left: 100%;
+	}
+
+	&::before {
+		right: 100%;
+	}
 }
 
 .nuoma {
 	&.isorinis {
-		margin: 10px 130px;
+		padding-top: 70px;
+		padding-bottom: 30px;
 
-		@include media($full down) {
-			margin: 10px 50px;
+		@include media($large down) {
+		  padding-top: 50px;
 		}
 
 		@include media($medium down) {
-			margin: 10px 20px;
+		  padding-top: 30px;
 		}
 	}
 	.isorinis {

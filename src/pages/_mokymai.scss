@@ -1,13 +1,14 @@
 .mokymai {
 	&.isorinis {
-		margin: 10px 130px;
+		padding-top: 70px;
+		padding-bottom: 30px;
 
-		@include media($full down) {
-			margin: 10px 50px;
+		@include media($large down) {
+		  padding-top: 50px;
 		}
 
 		@include media($medium down) {
-			margin: 10px 20px;
+		  padding-top: 30px;
 		}
 	}
 
@@ -83,31 +84,15 @@
 				}
 
 				ul {
-					display: inline-block;
-					vertical-align: top;
-					width: 65%;
-					list-style: none;
 					padding: 0;
 
-					&:nth-child(2) {
-						width: 35%;
-
-						li {
-							color: $color--darkGrey;
-							padding-right: 30px;
-						}
-					}
-
-					@include media($small down) {
-
-					}
-
 					li {
+						display: block;
 						border-bottom: 1px solid $color--lightestGrey;
 						color: $color--greyOther;
 						font-size: 1rem;
-						font-weight: bold;
 						padding: 10px 0;
+						position: relative;
 
 						&:last-child {
 							border-bottom: none;
@@ -115,6 +100,17 @@
 
 						@include media($medium down) {
 							font-size: 0.9rem;
+						}
+
+						p {
+							display: inline-block;
+							vertical-align: top;
+							width: 40%;
+							margin: 10px 0;
+
+							&:last-child {
+								width: 59%;
+							}
 						}
 					}
 				}
@@ -140,12 +136,12 @@
 
 				p {
 					position: relative;
-					padding-left: 60px;
-					padding-bottom: 20px;
+					margin: 0;
+    				padding: 20px 0 20px 60px;
 
 					@include media($medium down) {
 						font-size: 0.95rem;
-						padding-left: 40px;
+						padding-left: 50px;
 						padding-bottom: 10px;
 					}
 
@@ -153,15 +149,21 @@
 						content: counter(numeracija);
 						counter-increment: numeracija;
 						position: absolute;
-					    top: 0px;
+					    top: 50%;
+					    transform: translateY(-50%);
 					    left: 0;
 					    background-color: $color--red;
-					    padding: 9px 17px;
-					    border-radius: 20px;
+					    height: 40px;
+					    width: 40px;
+					    display: flex;
+					    align-items: center;
+					    justify-content: center;
+					    border-radius: 50%;
 					    color: $color--white;
 
-					    @include media($medium down) {
-					    	padding: 4px 12px;
+					    @include media($small down) {
+					    	height: 30px;
+					    	width: 30px;
 					    }
 					}
 				}
@@ -292,3 +294,6 @@
 	}
 }
 
+.disabled {
+	display: none;
+}

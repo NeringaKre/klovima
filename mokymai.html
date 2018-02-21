@@ -6,59 +6,60 @@
 	<script type="text/javascript" src="./js/jquery-3.2.1.min.js"></script>
 	<script type="text/javascript" src="./js/jquery.matchHeight.js"></script>
 	<script type="text/javascript" src="./dist/bundle.js"></script>
+	<meta charset="utf-8"/>
 </head>
 <body>
+	<nav class="header">
+		<div class="header__burger-menu">
+			<span class="header__burger-menu--top"></span>
+			<span class="header__burger-menu--bottom"></span>
+		</div>
+		<div class="header__logo-wrapper">
+			<img src="./src/images/logo.png"/>
+		</div>
+		<ul class="header__menu">
+			<li>
+				<a href="#">Nuomojama technika</a>
+				<ul class="header__menu-second-level">
+					<li><a href="#">Traktoriai</a></li>
+					<li><a href="#">Kombainai</a></li>
+					<li><a href="#">Savivarčiai</a></li>
+					<li><a href="#">Krautuvai</a></li>
+					<li><a href="#">Puspriekabės</a></li>
+					<li><a href="#">Vilkikai</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="#">Parduodama technika</a>
+				<ul class="header__menu-second-level">
+					<li><a href="#">XX</a></li>
+					<li><a href="#">XX</a></li>
+					<li><a href="#">XX</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="#">Pervežimas</a>
+			</li>
+			<li>
+				<a href="#">Mokymai</a>
+			</li>
+			<li>
+				<a href="#">Naujienos</a>
+			</li>
+			<li>
+				<a href="#">Kontaktai</a>
+			</li>
+		</ul>
+
+		<ul class="language-menu"> 
+			<li class="language-menu__active">lt</li>
+			<li>en</li>
+		</ul>
+	</nav>
+
 	<div class="main">
 		<section class="main-section main-section__first other-pages">
-			<nav class="header">
-				<div class="header__burger-menu">
-					<span class="header__burger-menu--top"></span>
-					<span class="header__burger-menu--bottom"></span>
-				</div>
-				<div class="header__logo-wrapper">
-					<img src="./src/images/logo.png"/>
-				</div>
-				<ul class="header__menu">
-					<li>
-						<a href="#">Nuomojama technika</a>
-						<ul class="header__menu-second-level">
-							<li><a href="#">Traktoriai</a></li>
-							<li><a href="#">Kombainai</a></li>
-							<li><a href="#">Savivarčiai</a></li>
-							<li><a href="#">Krautuvai</a></li>
-							<li><a href="#">Puspriekabės</a></li>
-							<li><a href="#">Vilkikai</a></li>
-						</ul>
-					</li>
-					<li>
-						<a href="#">Parduodama technika</a>
-						<ul class="header__menu-second-level">
-							<li><a href="#">XX</a></li>
-							<li><a href="#">XX</a></li>
-							<li><a href="#">XX</a></li>
-						</ul>
-					</li>
-					<li>
-						<a href="#">Pervežimas</a>
-					</li>
-					<li>
-						<a href="#">Mokymai</a>
-					</li>
-					<li>
-						<a href="#">Naujienos</a>
-					</li>
-					<li>
-						<a href="#">Kontaktai</a>
-					</li>
-				</ul>
-
-				<ul class="language-menu"> 
-					<li class="language-menu__active">lt</li>
-					<li>en</li>
-					<li>ru</li>
-				</ul>
-			</nav>
-
+			
 			<div class="telephone-ask">
 				<p>Telefonas pasiteiravimui</p>
 				<p>+3706 41 65651</p>
@@ -88,28 +89,38 @@
 					<div class="isorinis__models-block-answers">
 						<h3>KLOVIMA specialistai suteiks Jums vertingų patarimų šiais klausimais:</h3>
 						<ul>
-							<li>Transporto įmonių steigimas</li>
-							<li>Darbo organizavimas transporto įmonėje</li>
-							<li>Finansinių srautų transporto įmonėje planavimas</li>
-							<li>Konsultavimas renkantis ir diegiant apskaitos ir valdymo programas </li>
-							<li>Remonto kaštų optimizavimas</li>
-							<li>Draudimas</li>
-						</ul>
-						<ul>
-							<li>Visi atsakymai į klausimus nuo A iki Z iš praktiko lūpų.</li>
-							<li>Kokie resursai reikalingi, kaip efektyviausiai organizuoti savo darbuotojų darbą, kaip maksimaliai efektyviai pateisinti klientų lūkesčius bei užtikrinti darbo efektyvumą bei pelningumą.</li>
-							<li>Kaip paskirstyti išteklius, jog gauti maksimalią naudą. Kada verta taupyti, o kuomet geriau išleisti daugiau?</li>
-							<li>Kokią apskaitos programą išsirinkti? kokios  funkcijos ir pjūviai reikalingi sėkmingam transporto įmonįs valdymui? Kaip programą, geriausiai atitinkančią konkrečios transporto kompanijos poreikius?</li>
-							<li>Transporto remontas ir priežiūra sudaro nemažą transporto įmonių kaštų dalį. Kaip savo lėšas panaudoti efektyviausiai, kada reikia taupyti, o kuomet vertėtų mokėti brangiau, bet gauti ilgalaikiškesnį sprendimą. Nepriklausoma patyrusių specialistų  nuomonė Jums padės lengviau apsispęsti ir taupyti remontui skirtas lėšas.</li>
-							<li>Ar Jūs esate tikri, kad Jūsų draudimas galioja apdraudžia nuo visų reikalingų  rizikų? Pasitaiko atvejų, kuomet įmonės sužino, jog  jų turimo draudimo apsauga tam tikrais atvejais negalioja,  per vėlai, t.y. kai įvykis jau įvyko.</li>
+							<li>
+								<p class="answers__paragraph-first"><span class="font-strong">Transporto įmonių steigimas</span></p>
+								<p>Visi atsakymai į klausimus nuo A iki Z iš praktiko lūpų.</p>
+							</li>
+							<li>
+								<p class="answers__paragraph-first"><span class="font-strong">Darbo organizavimas transporto įmonėje</span></p>
+								<p>Kokie resursai reikalingi, kaip efektyviausiai organizuoti savo darbuotojų darbą, kaip maksimaliai efektyviai pateisinti klientų lūkesčius bei užtikrinti darbo efektyvumą bei pelningumą.</p>
+							</li>
+							<li>
+								<p class="answers__paragraph-first"><span class="font-strong">Finansinių srautų transporto įmonėje planavimas</span></p>
+								<p>Kaip paskirstyti išteklius, jog gauti maksimalią naudą. Kada verta taupyti, o kuomet geriau išleisti daugiau?</p>
+							</li>
+							<li>
+								<p class="answers__paragraph-first"><span class="font-strong">Konsultavimas renkantis ir diegiant apskaitos ir valdymo programas</span></p>
+								<p>Kokią apskaitos programą išsirinkti? kokios  funkcijos ir pjūviai reikalingi sėkmingam transporto įmonįs valdymui? Kaip programą, geriausiai atitinkančią konkrečios transporto kompanijos poreikius?</p>
+							</li>
+							<li>
+								<p class="answers__paragraph-first"><span class="font-strong">Remonto kaštų optimizavimas</span></p>
+								<p>Transporto remontas ir priežiūra sudaro nemažą transporto įmonių kaštų dalį. Kaip savo lėšas panaudoti efektyviausiai, kada reikia taupyti, o kuomet vertėtų mokėti brangiau, bet gauti ilgalaikiškesnį sprendimą. Nepriklausoma patyrusių specialistų  nuomonė Jums padės lengviau apsispęsti ir taupyti remontui skirtas lėšas.</p>
+							</li>
+							<li>
+								<p class="answers__paragraph-first"><span class="font-strong">Draudimas</span></p>
+								<p>Ar Jūs esate tikri, kad Jūsų draudimas galioja apdraudžia nuo visų reikalingų  rizikų? Pasitaiko atvejų, kuomet įmonės sužino, jog  jų turimo draudimo apsauga tam tikrais atvejais negalioja,  per vėlai, t.y. kai įvykis jau įvyko.</p>
+							</li>
 						</ul>
 					</div>
 					<div class="isorinis__models-block-beginning">
 						<h3>Nuo ko pradėti?</h3>
 						<p class="number-one">Užpildykite užklausos formą ›</p>
 						<p class="number-two"><span class="font-strong">KLOVIMA</span> specialistai susisieks su Jumis, kad geriau išsiaiškintų poreikį ir suderintų konsultacijos laiką.</p>
-						<p class="number-three">Po pokalbio telefonu, atsiusime Jums klausimyną, kuris padės geriau pasirengti konsultacijai ir ir iškels aktualius klausimus.</p>
-						<p class="number-four">Užsirašykite visus iškilusius klausimus ir būtinai užduokite juos specialistui konsultacijos metu.</p>
+						<p class="number-two">Po pokalbio telefonu, atsiusime Jums klausimyną, kuris padės geriau pasirengti konsultacijai ir ir iškels aktualius klausimus.</p>
+						<p class="number-two">Užsirašykite visus iškilusius klausimus ir būtinai užduokite juos specialistui konsultacijos metu.</p>
 					</div>
 					<div class="isorinis__models-block-registration">
 						<h3>Užklausa</h3>
@@ -117,9 +128,10 @@
 							<p>El. paštas</p>
 							<input type="email" name="email">
 							<p>Telefonas</p>
-							<input type="number" name="telephone">
+							<input type="text" name="telephone">
 							<p>Tema</p>
 							<select class="select">
+								<option class="disabled"></option>
 								<option>Užsirašykite visus iškilusius</option>
 								<option>Užsirašykite visus iškilusius klausimu</option>
 								<option>Užsirašykite visus iškilusius klausimus</option>
@@ -139,11 +151,11 @@
 				<div class="footer__first">
 					<p class="footer__first--item">Prenumeruok mūsų naujienlaiškį:</p>
 					<form>
-						<div class="footer__first--item">
+						<div class="footer__first--item check">
 							<input type="checkbox" name="letter" value="lala" id="input-technika"> 
 							<label for="input-technika">Žemės ūkio technika</label>
 						</div>
-						<div class="footer__first--item">
+						<div class="footer__first--item check">
 							<input type="checkbox" name="letter" value="lala" id="input-nuoma">
 							<label for="input-nuoma">Transporto nuoma</label>
 						</div>

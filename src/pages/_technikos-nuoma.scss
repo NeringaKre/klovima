@@ -1,35 +1,42 @@
+.other-pages {
+	&.technika {
+		padding-top: 30px;
+	}
+}
+
 .technikos-nuoma {
+	&__header-img {
+		position: absolute;
+	    top: 0;
+	    left: 0;
+	    width: 100%;
+	    height: 100%;
+	    background-image: url('../src/images/technikos-nuoma-pic.png');
+	    background-repeat: no-repeat;
+	    background-position: center;
+
+	    .isorinis__heading {
+    	    position: absolute;
+		    top: 50%;
+		    left: 50%;
+		    transform: translate(-50%, -50%);
+
+	    	> * {
+	    		color: $color--white;
+	    	}
+
+	    	.other-pages__arrow2 {
+	    		position: absolute;
+	    		margin: 0;
+	    		bottom: -90px;
+			    left: 50%;
+			    transform: translateX(-50%);
+	    	}
+	    }
+	}
+
 	&.isorinis {
-
-		.technikos-nuoma {
-			&__header-img {
-				position: absolute;
-			    left: 0;
-			    top: 77px;
-			    width: 100%;
-			    height: 390px;
-			    background-image: url('../src/images/technikos-nuoma-pic.png');
-			    background-repeat: no-repeat;
-			    background-position: center;
-
-			    @include media($large down) {
-			    	top: 40px;
-			    }
-			}
-		}
-
-		margin: 10px 130px;
-		margin-top: 430px;
-
-		@include media($full down) {
-		 	margin-left: 50px;
-		 	margin-right: 50px;
-		}
-
-		@include media($medium down) {
-		 	margin-left: 10px;
-		 	margin-right: 10px;
-		}
+		margin: 10px 0;
 
 		&__heading {
 			margin: auto;
@@ -331,6 +338,7 @@
 			background-repeat: no-repeat;
 			background-position: center left 40px;
 			position: relative;
+			margin-bottom: 35px;
 
 			@include media($large down) {
 			}

@@ -1,15 +1,15 @@
 .footer__first {
-	padding: 50px 15px 50px 25px;
+	padding: 50px 5px 50px 5px;
 
-    @include media ($medium down) {
+    @include media ($large down) {
     	display: block;
-    	padding: 20px 15px 20px 25px;
+    	padding: 20px 25px 20px 25px;
     }
 
     > p {
     	display: inline-block;
     	vertical-align: middle;
-    	width: 30%;
+    	width: 25%;
 
     	@include media($large down) {
     		display: block;
@@ -20,7 +20,8 @@
 	form {
 		display: inline-block;
 		vertical-align: middle;
-		width: 70%;
+		width: 75%;
+		text-align: right;
 
 		@include media ($large down) {
 			display: block;
@@ -50,8 +51,9 @@
 			}
 
 			@include media ($large down) {
-				margin-bottom: 10px;
 				display: block;
+				text-align: left;
+				margin-bottom: 10px;
 			}
 
 			@include media ($medium down) {
@@ -73,6 +75,43 @@
 			    margin-bottom: 5px;
 			    margin-right: 5px;
 			}
+
+			&.check {
+				position: relative;
+
+				input {
+					margin: 5px;
+				}
+
+				input[type=checkbox]:checked + label:after {
+					opacity: 1;
+				}
+
+				label {
+					cursor: pointer;
+
+					&::after {
+						opacity: 0.2;
+						content: '';
+						position: absolute;
+						width: 9px;
+						height: 5px;
+						background: transparent;
+						top: 6px;
+						left: 7px;
+						border: 3px solid #333;
+						border-top: none;
+						border-right: none;
+						transform: rotate(-45deg);
+					}
+
+					&:hover {
+						&::after {
+							opacity: 0.5;
+						}
+					}
+				}
+			}
 		}
 
 		> input {
@@ -90,10 +129,28 @@
 
 .footer__second {
 	background-color: $color--quaternary;
-	padding: 50px 15px 50px 25px;
+	padding: 50px 5px 50px 5px;
+	position: relative;
+
+	&::after, &::before {
+		position: absolute;
+		top: 0;
+		content: '';
+		width: 40px;
+		height: 200%;
+		background-color: $color--quaternary;
+	} 
+
+	&::after {
+		right: -40px;
+	}
+
+	&::before {
+		left: -40px;
+	}
 
 	@include media ($medium down) {
-    	padding: 20px 15px 20px 25px;
+    	padding: 20px 5px 20px 5px; 
     }
 
 	> p {
@@ -161,13 +218,31 @@
 .footer__third {
 	position: relative;
 	background-color: $color--quaternary;
-	padding: 30px 15px 70px 25px;
+	padding: 30px 5px 70px 5px;
 	display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
+
+    &::after, &::before {
+		position: absolute;
+		top: 0;
+		content: '';
+		width: 40px;
+		height: 100%;
+		background-color: $color--quaternary;
+	} 
+
+	&::after {
+		right: -40px;
+	}
+
+	&::before {
+	 	left: 20px;
+	}
 
     @include media ($medium down) {
-    	padding: 20px 15px 20px 25px;
+    	padding: 20px 5px 20px 5px;
     	display: block;
     }
 

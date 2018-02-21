@@ -1,9 +1,15 @@
 // sutvarkyti visa nestinima, kuo tolyn, gilyn. Po gilaus aprasymo nebegrizt vel prie trumpu
+.other-pages {
+  nav {
+  }
+}
 
 nav {
+  position: relative;
 	display: block;
 	background-color: $color--primary;
-  padding: 0 15px 0 25px;
+  padding-left: 10px;
+  z-index: 1;
 
   @include media($large down) {
     padding: 0 15px 0 5px;
@@ -11,6 +17,25 @@ nav {
 
   @include media ($medium down) {
     padding: 11px 15px; 
+  }
+
+  &::after,
+  &::before {
+    position: absolute;
+    top: 0;
+    width: 2000px;
+    height: 100%;
+    content: "";
+    background-color: $color--primary;
+    z-index: 1;
+  }
+
+  &::after {
+    left: 100%;
+  }
+
+  &::before {
+    right: 100%;
   }
 }
 
@@ -55,7 +80,7 @@ nav {
     width: calc(100% - 210px);
 
     @include media ($full down) {
-      padding-left: 5px;
+      padding-left: 15px;
     }
 
     @include media ($large down) {
@@ -75,7 +100,7 @@ nav {
     > li {
       position: relative;
       padding-right: 15px;
-      margin-left: 16px;
+      margin-left: 24px;
       display: inline-block;
       vertical-align: middle;
       margin-right: 15px;
@@ -89,7 +114,7 @@ nav {
 
       @include media($large down) {
         padding-right: 12px;
-        margin-left: -5px;
+        margin-left: -6px;
         font-size: 0.9rem;
         margin-right: 1.25%;
       }
@@ -169,7 +194,7 @@ nav {
       &::before {
         position: absolute;
         top: 32px;
-        right: -11px;
+        right: -12px;
         content: "";
         background-color: white;
         opacity: 0.3;
@@ -177,7 +202,7 @@ nav {
         height: 20px;
 
         @include media ($full down) {
-          right: -7px;
+          right: -6px;
         }
 
         @include media ($large down) {
@@ -208,9 +233,9 @@ nav {
       a {
         color: $color--tertiary;
 
-        &:hover {
-          color: $color--white;
-        }
+        // &:hover {
+        //   color: $color--white;
+        // }
       }
 
       &.active {
@@ -273,6 +298,14 @@ nav {
       }
     }
   }
+
+  .frontpage & {
+    display: none;
+  }
+
+  .fp-viewing-0 & {
+    display: block;
+  }
 }
 
 .language-menu {
@@ -319,5 +352,9 @@ nav {
   display: block;
 }
 
-
+.active2.active2 {
+  > a {
+    color: $color--white;
+  }
+}
 

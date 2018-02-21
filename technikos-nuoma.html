@@ -6,73 +6,74 @@
 	<script type="text/javascript" src="./js/jquery-3.2.1.min.js"></script>
 	<script type="text/javascript" src="./js/jquery.matchHeight.js"></script>
 	<script type="text/javascript" src="./dist/bundle.js"></script>
+	<meta charset="utf-8"/>
 </head>
 <body>
+	<nav class="header">
+		<div class="header__burger-menu">
+			<span class="header__burger-menu--top"></span>
+			<span class="header__burger-menu--bottom"></span>
+		</div>
+		<div class="header__logo-wrapper">
+			<img src="./src/images/logo.png"/>
+		</div>
+		<ul class="header__menu">
+			<li>
+				<a href="#">Nuomojama technika</a>
+				<ul class="header__menu-second-level">
+					<li><a href="#">Traktoriai</a></li>
+					<li><a href="#">Kombainai</a></li>
+					<li><a href="#">Savivarčiai</a></li>
+					<li><a href="#">Krautuvai</a></li>
+					<li><a href="#">Puspriekabės</a></li>
+					<li><a href="#">Vilkikai</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="#">Parduodama technika</a>
+				<ul class="header__menu-second-level">
+					<li><a href="#">XX</a></li>
+					<li><a href="#">XX</a></li>
+					<li><a href="#">XX</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="#">Pervežimas</a>
+			</li>
+			<li>
+				<a href="#">Mokymai</a>
+			</li>
+			<li>
+				<a href="#">Naujienos</a>
+			</li>
+			<li>
+				<a href="#">Kontaktai</a>
+			</li>
+		</ul>
+
+		<ul class="language-menu"> 
+			<li class="language-menu__active">lt</li>
+			<li>en</li>
+		</ul>
+	</nav>
 	<div class="main">
-		<section class="main-section main-section__first other-pages technika">
-			<nav class="header">
-				<div class="header__burger-menu">
-					<span class="header__burger-menu--top"></span>
-					<span class="header__burger-menu--bottom"></span>
-				</div>
-				<div class="header__logo-wrapper">
-					<img src="./src/images/logo.png"/>
-				</div>
-				<ul class="header__menu">
-					<li>
-						<a href="#">Nuomojama technika</a>
-						<ul class="header__menu-second-level">
-							<li><a href="#">Traktoriai</a></li>
-							<li><a href="#">Kombainai</a></li>
-							<li><a href="#">Savivarčiai</a></li>
-							<li><a href="#">Krautuvai</a></li>
-							<li><a href="#">Puspriekabės</a></li>
-							<li><a href="#">Vilkikai</a></li>
-						</ul>
-					</li>
-					<li>
-						<a href="#">Parduodama technika</a>
-						<ul class="header__menu-second-level">
-							<li><a href="#">XX</a></li>
-							<li><a href="#">XX</a></li>
-							<li><a href="#">XX</a></li>
-						</ul>
-					</li>
-					<li>
-						<a href="#">Pervežimas</a>
-					</li>
-					<li>
-						<a href="#">Mokymai</a>
-					</li>
-					<li>
-						<a href="#">Naujienos</a>
-					</li>
-					<li>
-						<a href="#">Kontaktai</a>
-					</li>
-				</ul>
-
-				<ul class="language-menu"> 
-					<li class="language-menu__active">lt</li>
-					<li>en</li>
-					<li>ru</li>
-				</ul>
-			</nav>
-
+		<section class="main-section other-pages heading-block">
 			<div class="telephone-ask">
 				<p>Telefonas pasiteiravimui</p>
 				<p>+3706 41 65651</p>
 			</div>
-			<div class="technikos-nuoma isorinis">
-				<div class="technikos-nuoma__header-img">
-					<div class="isorinis__heading">
-						<h1>Technikos nuoma</h1>
-						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</p>
-						<div class="other-pages__arrow2">
-							<img src="./src/images/down-arrow-white.svg">
-						</div>
+			<div class="technikos-nuoma__header-img">
+				<div class="isorinis__heading">
+					<h1>Technikos nuoma</h1>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</p>
+					<div class="other-pages__arrow2">
+						<img src="./src/images/down-arrow-white.svg">
 					</div>
 				</div>
+			</div>
+		</section>
+		<section class="main-section other-pages technika">
+			<div class="technikos-nuoma isorinis">
 				<div class="advantages-table">
 					<div class="advantages-table__column first-column">
 						<h3>kombainų nuoma</h3>
@@ -152,11 +153,11 @@
 				<div class="footer__first">
 					<p class="footer__first--item">Prenumeruok mūsų naujienlaiškį:</p>
 					<form>
-						<div class="footer__first--item">
+						<div class="footer__first--item check">
 							<input type="checkbox" name="letter" value="lala" id="input-technika"> 
 							<label for="input-technika">Žemės ūkio technika</label>
 						</div>
-						<div class="footer__first--item">
+						<div class="footer__first--item check">
 							<input type="checkbox" name="letter" value="lala" id="input-nuoma">
 							<label for="input-nuoma">Transporto nuoma</label>
 						</div>
