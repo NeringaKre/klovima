@@ -1175,6 +1175,9 @@ nav {
 .main-section__first #fp-nav {
   display: none; }
 
+footer {
+  padding: 0 10px; }
+
 .footer__first {
   padding: 50px 5px 50px 5px; }
   @media screen and (max-width: 1024px) {
@@ -1552,11 +1555,14 @@ nav {
             font-weight: bold; }
 
 .nuoma .isorinis__other-nuoma {
-  margin: 40px 50px 60px;
+  margin: 40px 0 20px;
   text-align: center; }
   @media screen and (max-width: 1024px) {
     .nuoma .isorinis__other-nuoma {
-      margin: 40px 0 60px; } }
+      margin: 30px 10px 20px; } }
+  @media screen and (max-width: 768px) {
+    .nuoma .isorinis__other-nuoma {
+      margin: 0 10px; } }
   .nuoma .isorinis__other-nuoma > button {
     margin-right: 15px;
     margin-bottom: 15px;
@@ -1564,15 +1570,31 @@ nav {
     text-transform: uppercase;
     font-size: 0.95rem;
     font-weight: bold; }
+    @media screen and (max-width: 1024px) {
+      .nuoma .isorinis__other-nuoma > button {
+        font-size: 0.9rem;
+        background-size: 40px;
+        padding: 10px 20px 10px 70px;
+        margin-right: 5px; } }
     @media screen and (max-width: 768px) {
       .nuoma .isorinis__other-nuoma > button {
-        font-size: 0.85rem; } }
+        font-size: 0.85rem;
+        background-image: none;
+        padding: 6px 20px;
+        text-align: center;
+        font-size: 0.75rem; } }
     .nuoma .isorinis__other-nuoma > button:hover {
       color: #FFFFFF; }
     .nuoma .isorinis__other-nuoma > button.tractor {
       background-image: urL("asdasdasd"); }
     .nuoma .isorinis__other-nuoma > button.tractor {
       background-image: urL("asdasdasd"); }
+    @media screen and (max-width: 1024px) {
+      .nuoma .isorinis__other-nuoma > button span {
+        font-size: 0.9rem; } }
+    @media screen and (max-width: 768px) {
+      .nuoma .isorinis__other-nuoma > button span {
+        font-size: 0.75rem; } }
 
 .pervezimas.isorinis {
   padding-top: 70px;
@@ -2226,6 +2248,10 @@ nav {
     display: inline-block;
     vertical-align: top;
     width: 45%; }
+    @media screen and (max-width: 1024px) {
+      .nuoma-vidinis .isorinis__models-block--product-images {
+        display: block;
+        margin: auto; } }
   .nuoma-vidinis .isorinis__models-block--product-info {
     display: inline-block;
     vertical-align: top;
@@ -2266,10 +2292,12 @@ nav {
           margin: 0;
           padding-bottom: 10px; } }
       .nuoma-vidinis .isorinis__models-block--product-info > div button {
-        padding: 13px 20px; }
+        padding: 13px 20px;
+        margin-bottom: 30px; }
         @media screen and (max-width: 480px) {
           .nuoma-vidinis .isorinis__models-block--product-info > div button {
-            padding: 8px 15px; } }
+            padding: 8px 15px;
+            margin-bottom: 0; } }
 
 .nuoma-vidinis .isorinis__heading > p {
   display: inline-block;
@@ -2284,8 +2312,17 @@ nav {
     font-size: 1rem; }
 
 .nuoma-vidinis .isorinis__other-nuoma {
-  margin: 40px 50px 60px;
+  margin: 40px 0 20px;
   text-align: center; }
+  @media screen and (max-width: 1024px) {
+    .nuoma-vidinis .isorinis__other-nuoma {
+      margin: 30px 10px 20px; } }
+  @media screen and (max-width: 768px) {
+    .nuoma-vidinis .isorinis__other-nuoma {
+      margin: 0 10px; } }
+  @media screen and (max-width: 480px) {
+    .nuoma-vidinis .isorinis__other-nuoma {
+      margin-top: 40px; } }
   .nuoma-vidinis .isorinis__other-nuoma > button {
     margin-right: 15px;
     margin-bottom: 15px;
@@ -2293,6 +2330,27 @@ nav {
     font-size: 0.95rem;
     font-weight: bold;
     color: #808080; }
+    .nuoma-vidinis .isorinis__other-nuoma > button:hover {
+      color: #FFFFFF; }
+    @media screen and (max-width: 1024px) {
+      .nuoma-vidinis .isorinis__other-nuoma > button {
+        font-size: 0.9rem;
+        background-size: 40px;
+        padding: 10px 20px 10px 70px;
+        margin-right: 5px; } }
+    @media screen and (max-width: 768px) {
+      .nuoma-vidinis .isorinis__other-nuoma > button {
+        font-size: 0.85rem;
+        background-image: none;
+        padding: 6px 20px;
+        text-align: center;
+        font-size: 0.75rem; } }
+    @media screen and (max-width: 1024px) {
+      .nuoma-vidinis .isorinis__other-nuoma > button span {
+        font-size: 0.9rem; } }
+    @media screen and (max-width: 768px) {
+      .nuoma-vidinis .isorinis__other-nuoma > button span {
+        font-size: 0.75rem; } }
 
 .mokymai.isorinis {
   padding-top: 70px;
@@ -2522,6 +2580,9 @@ nav {
           content: none; } }
   .mokymai .isorinis__heading .active {
     color: #B82930; }
+  @media screen and (max-width: 768px) {
+    .mokymai .isorinis__heading .other-pages__arrow {
+      display: none; } }
 
 .disabled {
   display: none; }
@@ -2734,14 +2795,14 @@ img {
   @media screen and (max-width: 1240px) {
     .telephone-ask {
       right: -11%; } }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 900px) {
     .telephone-ask {
       position: relative;
       display: block;
       border-radius: 0;
       text-align: center;
       padding: 10px 0;
-      margin: -5px 0 -50px 0;
+      margin: -1px 0 -50px 0;
       right: 0; } }
   .telephone-ask > p {
     margin: 0;
@@ -2753,13 +2814,13 @@ img {
 
 .isorinis__heading {
   margin: auto;
-  width: 50%;
+  width: 55%;
   text-align: center;
   position: relative; }
   @media screen and (max-width: 768px) {
     .isorinis__heading {
       width: 100%;
-      padding: 0 20px; } }
+      padding: 0 20px 10px; } }
   .isorinis__heading h1 {
     font-size: 3rem;
     font-weight: bold;
@@ -2774,12 +2835,15 @@ img {
     font-size: 1.1rem; }
     @media screen and (max-width: 768px) {
       .isorinis__heading > p {
-        margin: 10px 20px; } }
+        margin: 5px 0; } }
 
 .paging {
   display: block;
   margin-top: 50px;
   margin-bottom: 35px; }
+  @media screen and (max-width: 1024px) {
+    .paging {
+      margin-top: 0; } }
   .paging ul {
     text-align: center;
     padding: 0; }
@@ -2868,17 +2932,13 @@ img {
 
 @media screen and (max-width: 768px) {
   .other-pages__arrow {
-    margin-top: 20px; } }
+    display: none; } }
 
 .other-pages__arrow {
   width: 20px;
   margin: auto;
   margin-bottom: 30px;
   margin-top: 30px; }
-  @media screen and (max-width: 768px) {
-    .other-pages__arrow {
-      margin-top: 20px;
-      margin-bottom: 20px; } }
 
 .other-pages__arrow2 {
   width: 20px;

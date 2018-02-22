@@ -194,13 +194,13 @@ img {
       right: -11%;
     }
 
-    @include media($medium down) {
+    @include media(($large)-124px down) {
       position: relative;
       display: block;
       border-radius: 0;
       text-align: center;
       padding: 10px 0;
-      margin: -5px 0 -50px 0;
+      margin: -1px 0 -50px 0;
       right: 0;
     }
 
@@ -221,13 +221,13 @@ img {
 .isorinis {
 	&__heading {
 		  margin: auto;
-    	width: 50%;
+    	width: 55%;
    		text-align: center;
    		position: relative;
 
       @include media($medium down) {
         width: 100%;
-        padding: 0 20px;
+        padding: 0 20px 10px;
       }
 
    		h1 {
@@ -248,7 +248,7 @@ img {
    			font-size: 1.1rem;
 
         @include media($medium down) {
-           margin: 10px 20px;
+           margin: 5px 0;
         }
    		} 
 	}
@@ -258,6 +258,10 @@ img {
   display: block;
   margin-top: 50px;
   margin-bottom: 35px;
+
+  @include media ($large down) {
+    margin-top: 0;
+  }
 
   ul {
       text-align: center;
@@ -402,7 +406,7 @@ img {
   // margin-bottom: 30px;
 
   @include media($medium down) {
-    margin-top: 20px;
+    display: none;
   }
 }
 
@@ -412,10 +416,10 @@ img {
   margin-bottom: 30px;
   margin-top: 30px;
 
-  @include media($medium down) {
-    margin-top: 20px;
-    margin-bottom: 20px;
-  }
+  // @include media($medium down) {
+  //   margin-top: 20px;
+  //   margin-bottom: 20px;
+  // }
 }
 
 .other-pages__arrow2 {

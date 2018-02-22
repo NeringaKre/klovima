@@ -97,11 +97,15 @@
 		}
 
 		&__other-nuoma {
-			margin: 40px 50px 60px;
+			margin: 40px 0 20px;
 			text-align: center;
 
 			@include media ($large down) {
-				margin: 40px 0 60px;
+				margin: 30px 10px 20px;
+			}
+
+			@include media ($medium down) {
+				margin: 0 10px;
 			}
 
 			> button {
@@ -112,8 +116,19 @@
 				font-size: 0.95rem;
 				font-weight: bold;
 
+				@include media($large down) {
+					font-size: 0.9rem;
+					background-size: 40px;
+					padding: 10px 20px 10px 70px;
+					margin-right: 5px;
+				}
+
 				@include media($medium down) {
-					font-size: 0.85rem
+					font-size: 0.85rem;
+					background-image: none;
+				    padding: 6px 20px;
+				    text-align: center;
+				    font-size: 0.75rem;
 				}
 
 				&:hover {
@@ -126,6 +141,16 @@
 
 				&.tractor {
 					background-image: urL('asdasdasd');
+				}
+
+				span {
+					@include media($large down) {
+						font-size: 0.9rem;
+					}
+
+					@include media ($medium down) {
+						font-size: 0.75rem;
+					}
 				}
 			}
 		}

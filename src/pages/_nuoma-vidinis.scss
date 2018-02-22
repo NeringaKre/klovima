@@ -20,6 +20,11 @@
 				display: inline-block;
 				vertical-align: top;
 				width: 45%;
+
+				@include media($large down) {
+					display: block;
+					margin: auto;
+				} 
 			}
 
 			&--product-info {
@@ -82,9 +87,11 @@
 
     				button {
     					padding: 13px 20px;
+    					margin-bottom: 30px;
 
     					@include media($small down) {
     						padding: 8px 15px;
+    						margin-bottom: 0;
     					}
     				}
 				}
@@ -109,8 +116,20 @@
 		}
 
 		&__other-nuoma {
-			margin: 40px 50px 60px;
+			margin: 40px 0 20px;
     		text-align: center;
+
+			@include media ($large down) {
+				margin: 30px 10px 20px;
+			}
+
+			@include media ($medium down) {
+				margin: 0 10px;
+			}
+
+			@include media ($small down) {
+				margin-top: 40px;
+			}
 
     		>button {
     			margin-right: 15px;
@@ -119,6 +138,35 @@
     			font-size: 0.95rem;
     			font-weight: bold;
     			color: $color--greyOther;
+
+    			&:hover {
+					color: $color--white;
+				}
+
+    			@include media($large down) {
+					font-size: 0.9rem;
+					background-size: 40px;
+					padding: 10px 20px 10px 70px;
+					margin-right: 5px;
+				}
+
+				@include media($medium down) {
+					font-size: 0.85rem;
+					background-image: none;
+				    padding: 6px 20px;
+				    text-align: center;
+				    font-size: 0.75rem;
+				}
+
+				span {
+					@include media($large down) {
+						font-size: 0.9rem;
+					}
+
+					@include media ($medium down) {
+						font-size: 0.75rem;
+					}
+				}
     		}
 		}
 	}

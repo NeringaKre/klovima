@@ -290,6 +290,12 @@
 			.active {
 				color: $color--red;
 			}
+
+			.other-pages__arrow {
+				@include media($medium down) {
+					display: none;
+				}
+			}
 		}
 	}
 }

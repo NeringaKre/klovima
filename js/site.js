@@ -43,7 +43,7 @@
 
     $('.paging ul li').click(function() {
       $('.paging ul li').removeClass("active");
-      $(this).addClass("active");
+      $(this).toggleClass("active");
     });
 
 
