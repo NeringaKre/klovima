@@ -1,5 +1,9 @@
 footer {
 	padding: 0 10px;
+	max-width: 1300px;
+	margin: auto;
+	left: 50%;
+	transform: translateX(-50%);
 }
 
 .footer__first {
@@ -140,17 +144,17 @@ footer {
 		position: absolute;
 		top: 0;
 		content: '';
-		width: 40px;
+		width: 1000px;
 		height: 200%;
 		background-color: $color--quaternary;
 	} 
 
 	&::after {
-		right: -40px;
+		right: 99%;
 	}
 
 	&::before {
-		left: -40px;
+		left: 99%;
 	}
 
 	@include media ($medium down) {
@@ -174,6 +178,12 @@ footer {
 		@include media ($small down) {
 			font-size: 1.05rem;
 		}
+	}
+
+	> div,
+	> p {
+		position: relative;
+		z-index: 1;
 	}
 }
 

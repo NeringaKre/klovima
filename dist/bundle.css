@@ -726,10 +726,13 @@ html.fp-enabled,
   .main-section__first {
     background-image: url("../src/images/layer1.png"); }
     .main-section__first .main-section__info-block {
-      width: 45%; }
+      width: 100%;
+      padding-right: 40%;
+      margin: auto;
+      max-width: 1300px; }
       @media screen and (max-width: 1240px) {
         .main-section__first .main-section__info-block {
-          width: 65%; } }
+          padding-right: 35%; } }
       .main-section__first .main-section__info-block > h1 {
         margin-bottom: 30px; }
   .main-section__second {
@@ -747,12 +750,12 @@ html.fp-enabled,
   .main-section__info-block {
     position: absolute;
     top: 50%;
-    -webkit-transform: translateY(-50%);
-            transform: translateY(-50%);
-    width: 70%; }
-    @media screen and (max-width: 1240px) {
-      .main-section__info-block {
-        width: 70%; } }
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    width: 100%;
+    padding-right: 30%;
+    max-width: 1300px; }
     .main-section__info-block > h1 {
       font-size: 4.4rem;
       color: #FFFFFF;
@@ -879,7 +882,9 @@ td {
 .frontpage nav {
   position: absolute;
   top: 0;
-  left: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
   width: 100%; }
 
 .frontpage footer {
@@ -887,6 +892,8 @@ td {
   bottom: 0; }
 
 nav {
+  max-width: 1300px;
+  margin: auto;
   position: relative;
   display: block;
   background-color: #B92A30;
@@ -905,11 +912,11 @@ nav {
     height: 100%;
     content: "";
     background-color: #B92A30;
-    z-index: 1; }
+    z-index: 0; }
   nav::after {
-    left: 100%; }
+    left: 99%; }
   nav::before {
-    right: 100%; }
+    right: 99%; }
 
 .header__burger-menu {
   display: none;
@@ -931,6 +938,7 @@ nav {
       cursor: pointer; } }
 
 .header__logo-wrapper {
+  position: relative;
   display: inline-block;
   vertical-align: middle; }
   @media screen and (max-width: 1024px) {
@@ -1176,7 +1184,12 @@ nav {
   display: none; }
 
 footer {
-  padding: 0 10px; }
+  padding: 0 10px;
+  max-width: 1300px;
+  margin: auto;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%); }
 
 .footer__first {
   padding: 50px 5px 50px 5px; }
@@ -1278,13 +1291,13 @@ footer {
     position: absolute;
     top: 0;
     content: '';
-    width: 40px;
+    width: 1000px;
     height: 200%;
     background-color: #F1F1F1; }
   .footer__second::after {
-    right: -40px; }
+    right: 99%; }
   .footer__second::before {
-    left: -40px; }
+    left: 99%; }
   @media screen and (max-width: 768px) {
     .footer__second {
       padding: 20px 5px 20px 5px; } }
@@ -1302,6 +1315,10 @@ footer {
     @media screen and (max-width: 480px) {
       .footer__second > p {
         font-size: 1.05rem; } }
+  .footer__second > div,
+  .footer__second > p {
+    position: relative;
+    z-index: 1; }
 
 .footer__logos-wrapper {
   display: inline-block;
@@ -1415,10 +1432,13 @@ footer {
   .main-section__first {
     background-image: url("../src/images/layer1.png"); }
     .main-section__first .main-section__info-block {
-      width: 45%; }
+      width: 100%;
+      padding-right: 40%;
+      margin: auto;
+      max-width: 1300px; }
       @media screen and (max-width: 1240px) {
         .main-section__first .main-section__info-block {
-          width: 65%; } }
+          padding-right: 35%; } }
       .main-section__first .main-section__info-block > h1 {
         margin-bottom: 30px; }
   .main-section__second {
@@ -1436,12 +1456,12 @@ footer {
   .main-section__info-block {
     position: absolute;
     top: 50%;
-    -webkit-transform: translateY(-50%);
-            transform: translateY(-50%);
-    width: 70%; }
-    @media screen and (max-width: 1240px) {
-      .main-section__info-block {
-        width: 70%; } }
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    width: 100%;
+    padding-right: 30%;
+    max-width: 1300px; }
     .main-section__info-block > h1 {
       font-size: 4.4rem;
       color: #FFFFFF;

@@ -22,10 +22,13 @@
 		    background-image: url("../src/images/layer1.png");
 
 		    .main-section__info-block {
-		    	width: 45%;
+		    	width: 100%;
+		    	padding-right: 40%;
+		    	margin: auto;
+		    	max-width: 1300px;
 
 		    	@include media($full down) {
-			    	width: 65%;
+			    	padding-right: 35%;
 			    }
 
 		    	> h1 {
@@ -61,12 +64,11 @@
 		&__info-block {
 		    position: absolute;
 			top: 50%;
-			transform: translateY(-50%);
-			width: 70%;
-
-				@include media($full down) {
-			    	width: 70%;
-			    }
+			left: 50%;
+			transform: translate(-50%, -50%);
+			width: 100%;
+			padding-right: 30%;
+			max-width: 1300px;
 
 			> h1 {
 				font-size: 4.4rem;
