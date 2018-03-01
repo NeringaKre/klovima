@@ -740,6 +740,9 @@ html.fp-enabled,
     @media screen and (max-width: 480px) {
       .main-section {
         background-size: 320%; } }
+    @media screen and (min-width: 768px) {
+      .main-section__info-block .btn__transparent--big {
+        padding: 18px 25px; } }
     .main-section__info-block > button {
       font-size: 1.1rem; }
       @media screen and (max-width: 768px) {
@@ -1096,6 +1099,8 @@ nav {
       padding-top: 5px; }
     .header__menu > li a {
       color: #FFCCCC; }
+      .header__menu > li a:hover {
+        color: #FFFFFF; }
     .header__menu > li.active ul {
       display: block;
       position: absolute;
@@ -1326,7 +1331,7 @@ footer {
         .footer__first form .footer__first--item.check label {
           cursor: pointer; }
           .footer__first form .footer__first--item.check label::after {
-            opacity: 0.2;
+            opacity: 0;
             content: '';
             position: absolute;
             width: 9px;
@@ -1441,8 +1446,6 @@ footer {
     background-color: #F1F1F1; }
   .footer__third::after {
     right: -40px; }
-  .footer__third::before {
-    left: 20px; }
   @media screen and (max-width: 768px) {
     .footer__third {
       padding: 20px 5px 20px 5px;
@@ -1455,7 +1458,7 @@ footer {
     position: absolute;
     top: 0;
     content: "";
-    width: 97%;
+    width: 100%;
     height: 1px;
     background-color: #B5B5B5; }
   .footer__third > p {
@@ -1470,6 +1473,11 @@ footer {
         display: block; } }
     .footer__third > p:last-of-type {
       margin-right: 0; }
+  .footer__third > a p {
+    font-size: 1.15rem; }
+    @media screen and (max-width: 1024px) {
+      .footer__third > a p {
+        font-size: 1rem; } }
   .footer__third-facebook {
     background-image: url("../src/images/facebook.png");
     background-size: 9px;
@@ -1478,7 +1486,8 @@ footer {
     display: inline-block;
     padding-right: 15px;
     vertical-align: top;
-    font-size: 1.15rem; }
+    font-size: 1.15rem;
+    color: #808080; }
     @media screen and (max-width: 1024px) {
       .footer__third-facebook {
         font-size: 1rem; } }
@@ -1498,6 +1507,9 @@ footer {
     @media screen and (max-width: 480px) {
       .main-section {
         background-size: 320%; } }
+    @media screen and (min-width: 768px) {
+      .main-section__info-block .btn__transparent--big {
+        padding: 18px 25px; } }
     .main-section__info-block > button {
       font-size: 1.1rem; }
       @media screen and (max-width: 768px) {
@@ -3176,14 +3188,18 @@ img {
       padding: 10px 0;
       margin: -1px 0 -30px 0;
       right: 0; } }
-  .telephone-ask > p {
+  .telephone-ask p {
+    font-weight: normal;
+    font-size: 0.9rem;
+    margin: 0; }
+  .telephone-ask > a p {
     margin: 0;
-    font-weight: 600; }
-    .telephone-ask > p:first-child {
-      font-weight: normal;
-      font-size: 0.9rem; }
-    .telephone-ask > p:last-child {
-      font-size: 1.5rem; }
+    font-weight: 600;
+    font-size: 1.5rem; }
+    .telephone-ask > a p:hover {
+      color: #9D0B0E; }
+    .telephone-ask > a p:active {
+      color: #808080; }
 
 .isorinis__heading {
   margin: auto;
@@ -3225,10 +3241,11 @@ img {
       margin-right: 15px;
       display: inline-block;
       font-weight: 600;
-      color: #808080;
       width: 20px;
       padding: 2px 19px 2px 9px;
       border-radius: 50%; }
+      .paging ul > li a {
+        color: #808080; }
       .paging ul > li.active {
         background-color: #B92A30;
         border-radius: 50%; }

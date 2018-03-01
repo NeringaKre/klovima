@@ -21,15 +21,24 @@
 		    }
 
 		    &__info-block {
-		    > button {
-		    		font-size: 1.1rem;
 
-		    		@include media($medium down) {
-		    			font-size: 0.9rem;
-		    			padding: 12px 10px;
+
+		    	.btn__transparent--big {
+
+		    		@include media ($medium up) {
+		    			padding: 18px 25px;
 		    		}
 		    	}
-		    }
+
+			    > button {
+			    		font-size: 1.1rem;
+
+			    		@include media($medium down) {
+			    			font-size: 0.9rem;
+			    			padding: 12px 10px;
+			    		}
+			    	}
+			    }
 
 		&__first {
 		    background-image: url("../src/images/layer1.png");

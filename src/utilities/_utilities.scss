@@ -221,18 +221,26 @@ img {
       right: 0;
     }
 
-    > p{
-    	margin: 0;
-    	font-weight: $fw-semibold;
+    p {
+      font-weight: normal;
+      font-size: 0.9rem;
+      margin: 0;
+    }
 
-    	&:first-child {
-        font-weight: normal;
-    		font-size: 0.9rem;
-    	}
+    > a {
+        p {
+        margin: 0;
+        font-weight: $fw-semibold;
+        font-size: 1.5rem;
 
-    	&:last-child {
-    		font-size: 1.5rem;
-    	}
+        &:hover {
+          color: $color--quinary;
+        }
+
+        &:active {
+          color: $color--greyOther;
+        }
+      }
     }
 }
 
@@ -290,10 +298,13 @@ img {
         margin-right: 15px;
         display: inline-block;
         font-weight: $fw-semibold;
-        color: $color--greyOther;
         width: 20px;
         padding: 2px 19px 2px 9px;
         border-radius: 50%;
+
+        a {
+          color: $color--greyOther;
+        }
 
       &.active {
         background-color: $color--primary;

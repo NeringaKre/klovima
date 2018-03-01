@@ -70,11 +70,7 @@
 
     $('.isorinis__models-block > div').matchHeight();
 
-    $('.isorinis__info-blocks--first-line').matchHeight();
-
-    $('.isorinis__info-blocks--second-line').matchHeight();
-
-    $('.similar').matchHeight();
+    $('.isorinis__info-blocks > div').matchHeight();
 
     $('.header__menu li').click(function() {
       $('.header__menu li').removeClass("active2");

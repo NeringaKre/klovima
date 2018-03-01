@@ -1,4 +1,3 @@
-// sutvarkyti visa nestinima, kuo tolyn, gilyn. Po gilaus aprasymo nebegrizt vel prie trumpu
 .other-pages {
   nav {
   }
@@ -249,6 +248,10 @@ nav {
 
       a {
         color: $color--tertiary;
+
+        &:hover {
+          color: $color--white;
+        }
       }
 
       &.active {
