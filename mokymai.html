@@ -5,7 +5,21 @@
 	<link rel="stylesheet" type="text/css" href="./dist/bundle.css">
 	<script type="text/javascript" src="./js/jquery-3.2.1.min.js"></script>
 	<script type="text/javascript" src="./js/jquery.matchHeight.js"></script>
+	<script type="text/javascript" src="js/scrollreveal.min.js"></script>
 	<script type="text/javascript" src="./dist/bundle.js"></script>
+	 <script>
+      (function(){
+        var config = {
+          origin     : 'bottom',
+          viewFactor : 0.2,
+          duration   : 800,
+          distance   : "0px",
+          scale      : 0.97,
+          reset      : true,
+        }
+        window.sr = new ScrollReveal(config);
+      })()
+    </script>
 	<meta charset="utf-8"/>
 </head>
 <body>
@@ -55,23 +69,27 @@
 
 		<ul class="language-menu"> 
 			<li class="language-menu__active">lt</li>
-			<li>en</li>
+			<div>
+				<li>lt</li>
+				<li>en</li>
+				<li>ru</li>
+			</div>
 		</ul>
 	</nav>
 
 	<div class="main">
+		<div class="telephone-ask">
+			<p>Telefonas pasiteiravimui</p>
+			<p>+3706 41 65651</p>
+		</div>
 		<section class="main-section main-section__first other-pages">
-			
-			<div class="telephone-ask">
-				<p>Telefonas pasiteiravimui</p>
-				<p>+3706 41 65651</p>
-			</div>
-
 			<div class="mokymai isorinis">
 				<div class="isorinis__heading">
 					<h1>Mokymai</h1>
 					<div class="other-pages__arrow">
-						<img src="./src/images/down-arrow-small.svg">
+						<a href="#">
+							<img src="./src/images/down-arrow-small.svg">
+						</a>
 					</div>
 					<a href="#">
 						<p>Transporto įmonių konsultavimas</p>
@@ -84,11 +102,11 @@
 					</a>
 				</div>
 				<div class="isorinis__models-block">
-					<div class="isorinis__models-block-about">
+					<div class="isorinis__models-block-about foo">
 						<h3>1 valanda intensyvios praktiko-profesionalo konsultacijos gali padėti Jums savo versle ”sutaupyti” kelis metus ir žengti žingsnį į priekį. Naudokitės ne tik savo, bet ir mūsų patirtimi.</h3>
 						<button class="btn__red--big" type="submit">Registruotis konsultacijai</button>
 					</div>
-					<div class="isorinis__models-block-answers">
+					<div class="isorinis__models-block-answers foo">
 						<h3>KLOVIMA specialistai suteiks Jums vertingų patarimų šiais klausimais:</h3>
 						<ul>
 							<li>
@@ -117,14 +135,14 @@
 							</li>
 						</ul>
 					</div>
-					<div class="isorinis__models-block-beginning">
+					<div class="isorinis__models-block-beginning similar foo">
 						<h3>Nuo ko pradėti?</h3>
 						<p class="number-one">Užpildykite užklausos formą ›</p>
 						<p class="number-two"><span class="font-strong">KLOVIMA</span> specialistai susisieks su Jumis, kad geriau išsiaiškintų poreikį ir suderintų konsultacijos laiką.</p>
 						<p class="number-two">Po pokalbio telefonu, atsiusime Jums klausimyną, kuris padės geriau pasirengti konsultacijai ir ir iškels aktualius klausimus.</p>
 						<p class="number-two">Užsirašykite visus iškilusius klausimus ir būtinai užduokite juos specialistui konsultacijos metu.</p>
 					</div>
-					<div class="isorinis__models-block-registration">
+					<div class="isorinis__models-block-registration similar foo">
 						<h3>Užklausa</h3>
 						<form>
 							<p>El. paštas</p>
@@ -187,5 +205,8 @@
 			</footer>
 		</section>
 	</div>
+	<script>
+      sr.reveal('.foo');
+    </script>
 </body>
 </html>

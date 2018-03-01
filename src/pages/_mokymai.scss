@@ -19,6 +19,10 @@
 				padding: 30px 70px;
 				margin-bottom: 30px;
 
+				@include media($large down) {
+					margin: 0 10px 30px 10px;
+				}
+
 				@include media($medium down) {
 					padding: 10px 20px;
 				}
@@ -53,6 +57,7 @@
 					vertical-align: middle;
 					width: 30%;
 					padding: 15px 30px;
+					font-weight: $fw-semibold;
 
 					@include media($full down) {
 						font-size: 1rem;
@@ -105,11 +110,20 @@
 						p {
 							display: inline-block;
 							vertical-align: top;
-							width: 40%;
+							width: 42%;
 							margin: 10px 0;
 
 							&:last-child {
-								width: 59%;
+								width: 57%;
+								font-size: 1rem;
+
+								@include media($small down) {
+									width: 100%;
+								}
+							}
+
+							@include media($small down) {
+								width: 100%;
 							}
 						}
 					}
@@ -254,6 +268,7 @@
 
     			p {
     				font-size: 1rem;
+    				color: $color--darkGrey;
 
     				@include media($large down) {
     					font-size: 0.9rem;
@@ -262,6 +277,10 @@
     				@include media($small down) {
     					font-size: 0.8rem;
     				}
+
+    				&:hover {
+						color: $color--red;
+					}
     			}
 
     			&:last-child {

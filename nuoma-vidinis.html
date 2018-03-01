@@ -5,7 +5,21 @@
 	<link rel="stylesheet" type="text/css" href="./dist/bundle.css">
 	<script type="text/javascript" src="./js/jquery-3.2.1.min.js"></script>
 	<script type="text/javascript" src="./js/jquery.matchHeight.js"></script>
+	<script type="text/javascript" src="js/scrollreveal.min.js"></script>
 	<script type="text/javascript" src="./dist/bundle.js"></script>
+	 <script>
+      (function(){
+        var config = {
+          origin     : 'bottom',
+          viewFactor : 0.2,
+          duration   : 800,
+          distance   : "0px",
+          scale      : 0.97,
+          reset      : true,
+        }
+        window.sr = new ScrollReveal(config);
+      })()
+    </script>
 	<meta charset="utf-8"/>
 </head>
 <body>
@@ -55,31 +69,65 @@
 
 		<ul class="language-menu"> 
 			<li class="language-menu__active">lt</li>
-			<li>en</li>
+			<div>
+				<li>lt</li>
+				<li>en</li>
+				<li>ru</li>
+			</div>
 		</ul>
 	</nav>
 	<div class="main">
+		<div class="telephone-ask">
+			<p>Telefonas pasiteiravimui</p>
+			<p>+3706 41 65651</p>
+		</div>
 		<section class="main-section main-section__first other-pages">
-			
-
-			<div class="telephone-ask">
-				<p>Telefonas pasiteiravimui</p>
-				<p>+3706 41 65651</p>
-			</div>
-
 			<div class="nuoma-vidinis isorinis">
 				<div class="isorinis__heading">
 					<h1>Traktorius CLASS Xerion 5000 TRAC</h1>
-					<p><span class="color-red">Nuomojama technika</span></p>
-					<p><span class="color-red">Traktoriai</span></p>
-					<p>Traktorius CLASS Xerion 5000 TRAC</p>
+					<a href="#">
+						<p>Nuomojama technika</span></p>
+					</a>
+					<a href="#">
+						<p>Traktoriai</span></p>
+					</a>
+					<a href="#">
+						<p>Traktorius CLASS Xerion 5000 TRAC</p>
+					</a>
 					<div class="other-pages__arrow">
-						<img src="./src/images/down-arrow-small.svg">
+						<a href="#">
+							<img src="./src/images/down-arrow-small.svg">
+						</a>
 					</div>
 				</div>
-				<div class="isorinis__models-block">
+				<div class="isorinis__models-block background-c foo">
 					<div class="isorinis__models-block--product-images">
-						<img src="./src/images/produktas-vidinis-pagr.png"/>
+						<ul id="lightSlider">
+				            <li data-thumb="./src/images/produktas-vidinis-pagr.png">
+				              <img src="./src/images/produktas-vidinis-pagr.png"/>
+				            </li>
+				            <li data-thumb="./src/images/produktas-vidinis-pagr.png">
+				              <img src="./src/images/produktas-vidinis-pagr.png"/>
+				            </li>
+				            <li data-thumb="./src/images/produktas-vidinis-pagr.png">
+				              <img src="./src/images/produktas-vidinis-pagr.png"/>
+				            </li>
+				            <li data-thumb="./src/images/produktas-vidinis-pagr.png">
+				              <img src="./src/images/produktas-vidinis-pagr.png"/>
+				            </li>
+				            <li data-thumb="./src/images/produktas-vidinis-pagr.png">
+				              <img src="./src/images/produktas-vidinis-pagr.png"/>
+				            </li>
+				            <li data-thumb="./src/images/produktas-vidinis-pagr.png">
+				              <img src="./src/images/produktas-vidinis-pagr.png"/>
+				            </li>
+				            <li data-thumb="./src/images/produktas-vidinis-pagr.png">
+				              <img src="./src/images/produktas-vidinis-pagr.png"/>
+				            </li>
+				            <li data-thumb="./src/images/produktas-vidinis-pagr.png">
+				              <img src="./src/images/produktas-vidinis-pagr.png"/>
+				            </li>
+				          </ul>
 					</div>
 					<div class="isorinis__models-block--product-info">
 						<h3>Specifikacija</h3>
@@ -111,6 +159,147 @@
 						</div>
 					</div>
 				</div>
+				<div class="isorinis__info-block foo">
+					<div class="text-naujiena">
+						<p>naujiena!</p>
+					</div>
+					<div class="isorinis__info-block--text">
+						<h3><span class="span-uppercase">kombaino nuoma su operatoriumi</span></h3>
+						<p> Žemagrindžiais tralais vežame kombainus, traktorius, krautuvus ir kitus nestandartinių gabaritų krovinius visoje Lietuvoje.</p>
+					</div>
+					<div class="isorinis__info-block--label">
+						<div>
+							<p class="picture telephone">+3706 356 6663</p>
+						</div>
+						<div>
+							<p class="picture email">vytautas@klovima.lt</p>
+						</div>
+					</div>
+				</div>
+				<p class="foo">Panaši technika:</p>
+				<div class="isorinis__models-block foo">
+					<div class="isorinis__models-block--model">
+						<div>
+							<img src="./src/images/model.png">
+						</div>
+						<div class="isorinis__models-block--model-info">
+							<h3>Traktorius CLASS</h3>
+							<table>
+								<tr>
+							    	<td>Modelis</td>
+							    	<td>Arion 530</td>
+								</tr>
+								<tr>
+							  		<td>Variklis</td>
+							  		<td>520 AG</td>
+								</tr>
+								<tr>
+							  		<td>Pagamintas</td>
+							  		<td>2017</td>
+								</tr>
+								<tr>
+							  		<td>Nuomos kaina</td>
+							  		<td>Sutartinė</td>
+								</tr>
+							</table>
+							<div class="buttons-wrapper">
+								<button class="btn__red--small" type="submit">Klauskite</button>
+								<button class="btn__transparent--small" type="button">Specifikacija</button>
+							</div>
+						</div>
+					</div>
+					<div class="isorinis__models-block--model">
+						<div>
+							<img src="./src/images/model.png">
+						</div>
+						<div class="isorinis__models-block--model-info">
+							<h3>Traktorius CLASS</h3>
+							<table>
+								<tr>
+							    	<td>Modelis</td>
+							    	<td>Arion 530</td>
+								</tr>
+								<tr>
+							  		<td>Variklis</td>
+							  		<td>520 AG</td>
+								</tr>
+								<tr>
+							  		<td>Pagamintas</td>
+							  		<td>2017</td>
+								</tr>
+								<tr>
+							  		<td>Nuomos kaina</td>
+							  		<td>Sutartinė</td>
+								</tr>
+							</table>
+							<div class="buttons-wrapper">
+								<button class="btn__red--small" type="submit">Klauskite</button>
+								<button class="btn__transparent--small" type="button">Specifikacija</button>
+							</div>
+						</div>
+					</div>
+					<div class="isorinis__models-block--model">
+						<div>
+							<img src="./src/images/model.png">
+						</div>
+						<div class="isorinis__models-block--model-info">
+							<h3>Traktorius CLASS</h3>
+							<table>
+								<tr>
+							    	<td>Modelis</td>
+							    	<td>Arion 530</td>
+								</tr>
+								<tr>
+							  		<td>Variklis</td>
+							  		<td>520 AG</td>
+								</tr>
+								<tr>
+							  		<td>Pagamintas</td>
+							  		<td>2017</td>
+								</tr>
+								<tr>
+							  		<td>Nuomos kaina</td>
+							  		<td>Sutartinė</td>
+								</tr>
+							</table>
+							<div class="buttons-wrapper">
+								<button class="btn__red--small" type="submit">Klauskite</button>
+								<button class="btn__transparent--small" type="button">Specifikacija</button>
+							</div>
+						</div>
+					</div>
+					<div class="isorinis__models-block--model">
+						<div>
+							<img src="./src/images/model.png">
+						</div>
+						<div class="isorinis__models-block--model-info">
+							<h3>Traktorius CLASS</h3>
+							<table>
+								<tr>
+							    	<td>Modelis</td>
+							    	<td>Arion 530</td>
+								</tr>
+								<tr>
+							  		<td>Variklis</td>
+							  		<td>520 AG</td>
+								</tr>
+								<tr>
+							  		<td>Pagamintas</td>
+							  		<td>2017</td>
+								</tr>
+								<tr>
+							  		<td>Nuomos kaina</td>
+							  		<td>Sutartinė</td>
+								</tr>
+							</table>
+							<div class="buttons-wrapper">
+								<button class="btn__red--small" type="submit">Klauskite</button>
+								<button class="btn__transparent--small" type="button">Specifikacija</button>
+							</div>
+						</div>
+					</div>
+				</div>
+
 				<div class="isorinis__other-nuoma">
 					<button class="btn__transparent--image" type="button"><span>traktorių</span>nuoma</button>
 					<button class="btn__transparent--image" type="button"><span>krautuvų</span>nuoma</button>
@@ -163,5 +352,8 @@
 			</footer>
 		</section>
 	</div>
+	<script>
+      sr.reveal('.foo');
+    </script>
 </body>
 </html>

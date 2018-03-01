@@ -40,7 +40,7 @@
 	}
 	.isorinis {
 		&__models-block {
-			// cia ne modifyeris kad -- 
+			
 			&--model {
 				@include simple-grid;
 
@@ -82,11 +82,11 @@
 							td {
 								display: inline-block;
 								padding: 5px 0 5px 0;
-								width: 50%;
-
+								width: 52%;
 
 								&:last-child {
 									font-weight: bold;
+									width: 48%;
 								}
 							}
 

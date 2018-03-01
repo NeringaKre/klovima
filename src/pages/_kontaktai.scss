@@ -13,15 +13,23 @@
 	.isorinis {
 		&__info-blocks {
 
+			@include media($large down) {
+				margin: 0 10px;
+			}
+
 			> div {
 				background-color: $color--white;
 				margin-bottom: 30px;
 				padding: 0 30px 20px 30px;
 
 				@include media($medium down) {
-					padding: 1px 30px 20px 30px;
+					padding: 1px 10px 20px 30px;
 				}
 
+			}
+
+			&--map {
+				padding: 0 !important;
 			}
 
 			&--first-line {

@@ -83,4 +83,8 @@
 
 .main-section__first #fp-nav {
 	display: none;
+
+	&::after {
+		display: none; 
+	}
 }

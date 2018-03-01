@@ -5,7 +5,21 @@
 	<link rel="stylesheet" type="text/css" href="./dist/bundle.css">
 	<script type="text/javascript" src="./js/jquery-3.2.1.min.js"></script>
 	<script type="text/javascript" src="./js/jquery.matchHeight.js"></script>
+	<script type="text/javascript" src="js/scrollreveal.min.js"></script>
 	<script type="text/javascript" src="./dist/bundle.js"></script>
+	 <script>
+      (function(){
+        var config = {
+          origin     : 'bottom',
+          viewFactor : 0.2,
+          duration   : 800,
+          distance   : "0px",
+          scale      : 0.97,
+          reset      : true,
+        }
+        window.sr = new ScrollReveal(config);
+      })()
+    </script>
 	<meta charset="utf-8"/>
 </head>
 <body>
@@ -55,26 +69,30 @@
 
 		<ul class="language-menu"> 
 			<li class="language-menu__active">lt</li>
-			<li>en</li>
+			<div>
+				<li>lt</li>
+				<li>en</li>
+				<li>ru</li>
+			</div>
 		</ul>
 	</nav>
 	<div class="main">
+		<div class="telephone-ask">
+			<p>Telefonas pasiteiravimui</p>
+			<p>+3706 41 65651</p>
+		</div>
 		<section class="main-section main-section__first other-pages">
-			
-
-			<div class="telephone-ask">
-				<p>Telefonas pasiteiravimui</p>
-				<p>+3706 41 65651</p>
-			</div>
 			<div class="pervezimas isorinis">
 				<div class="isorinis__heading">
 					<h1>Pervežimas</h1>
 					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</p>
 					<div class="other-pages__arrow">
-						<img src="./src/images/down-arrow-small.svg">
+						<a href="#">
+							<img src="./src/images/down-arrow-small.svg">
+						</a>
 					</div>
 				</div>
-				<div class="isorinis__info-block">
+				<div class="isorinis__info-block foo">
 					<div class="isorinis__info-block--text">
 						<p> Žemagrindžiais tralais vežame kombainus, traktorius, krautuvus ir kitus nestandartinių gabaritų krovinius visoje Lietuvoje.</p>
 					</div>
@@ -88,7 +106,7 @@
 					</div>
 				</div>
 				<div class="isorinis__news-block">
-					<div class="isorinis__news-block--block">
+					<div class="isorinis__news-block--block foo">
 						<div>
 							<img src="./src/images/model.png">
 						</div>
@@ -97,7 +115,7 @@
 							<p>Donec sollicitudin molestie malesuada. Proin eget tortor risus. Vivamus suscipit tortor eget felis porttitor volutpat. Sed porttitor lectus nibh. Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a.</p>
 						</div>
 					</div>
-					<div class="isorinis__news-block--block"> 
+					<div class="isorinis__news-block--block foo"> 
 						<div>
 							<img src="./src/images/model.png">
 						</div>
@@ -152,5 +170,8 @@
 			</footer>
 		</section>
 	</div>
+	<script>
+      sr.reveal('.foo');
+    </script>
 </body>
 </html>

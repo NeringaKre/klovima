@@ -5,7 +5,21 @@
 	<link rel="stylesheet" type="text/css" href="./dist/bundle.css">
 	<script type="text/javascript" src="./js/jquery-3.2.1.min.js"></script>
 	<script type="text/javascript" src="./js/jquery.matchHeight.js"></script>
+	<script type="text/javascript" src="js/scrollreveal.min.js"></script>
 	<script type="text/javascript" src="./dist/bundle.js"></script>
+	 <script>
+      (function(){
+        var config = {
+          origin     : 'bottom',
+          viewFactor : 0.2,
+          duration   : 800,
+          distance   : "0px",
+          scale      : 0.97,
+          reset      : true,
+        }
+        window.sr = new ScrollReveal(config);
+      })()
+    </script>
 	<meta charset="utf-8"/>
 </head>
 <body>
@@ -55,28 +69,31 @@
 
 		<ul class="language-menu"> 
 			<li class="language-menu__active">lt</li>
-			<li>en</li>
+			<div>
+				<li>lt</li>
+				<li>en</li>
+				<li>ru</li>
+			</div>
 		</ul>
 	</nav>
 	<div class="main">
+		<div class="telephone-ask">
+			<p>Telefonas pasiteiravimui</p>
+			<p>+3706 41 65651</p>
+		</div>
 		<section class="main-section main-section__first other-pages">
-			
-
-			<div class="telephone-ask">
-				<p>Telefonas pasiteiravimui</p>
-				<p>+3706 41 65651</p>
-			</div>
-
 			<div class="nuoma isorinis">
 				<div class="isorinis__heading">
 					<h1>Žemės ūkio technikos nuoma</h1>
 					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
 					<div class="other-pages__arrow">
-						<img src="./src/images/down-arrow-small.svg">
+						<a href="#">
+							<img src="./src/images/down-arrow-small.svg">
+						</a>
 					</div>
 				</div>
 				<div class="isorinis__models-block">
-					<div class="isorinis__models-block--model">
+					<div class="isorinis__models-block--model foo">
 						<div>
 							<img src="./src/images/model.png">
 						</div>
@@ -106,7 +123,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="isorinis__models-block--model">
+					<div class="isorinis__models-block--model foo">
 						<div>
 							<img src="./src/images/model.png">
 						</div>
@@ -136,7 +153,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="isorinis__models-block--model">
+					<div class="isorinis__models-block--model foo">
 						<div>
 							<img src="./src/images/model.png">
 						</div>
@@ -166,7 +183,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="isorinis__models-block--model">
+					<div class="isorinis__models-block--model foo">
 						<div>
 							<img src="./src/images/model.png">
 						</div>
@@ -196,7 +213,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="isorinis__models-block--model">
+					<div class="isorinis__models-block--model foo">
 						<div>
 							<img src="./src/images/model.png">
 						</div>
@@ -226,7 +243,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="isorinis__models-block--model">
+					<div class="isorinis__models-block--model foo">
 						<div>
 							<img src="./src/images/model.png">
 						</div>
@@ -256,7 +273,7 @@
 							</div>
 						</div>
 					</div>
-					<div class="isorinis__models-block--model">
+					<div class="isorinis__models-block--model foo">
 						<div>
 							<img src="./src/images/model.png">
 						</div>
@@ -284,7 +301,7 @@
 							<button class="btn__transparent--small" type="button">Specifikacija</button>
 						</div>
 					</div>
-					<div class="isorinis__models-block--model">
+					<div class="isorinis__models-block--model foo">
 						<div>
 							<img src="./src/images/model.png">
 						</div>
@@ -315,7 +332,7 @@
 				</div>
 				<div class="paging">
 					<ul>
-						<li>
+						<li class="active">
 							<a href="#">1</a>
 						</li>
 						<li>
@@ -386,5 +403,8 @@
 			</footer>
 		</section>
 	</div>
+	<script>
+      sr.reveal('.foo');
+    </script>
 </body>
 </html>

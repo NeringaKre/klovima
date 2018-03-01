@@ -1,6 +1,8 @@
 // general code for html, body, regions
 
 .main {
+	position: relative;
+	
 	&-section {
 		background-size: 100%;
 		background-repeat: no-repeat;
@@ -16,6 +18,17 @@
 
 		    @include media($small down) {
 		    	background-size: 320%;
+		    }
+
+		    &__info-block {
+		    > button {
+		    		font-size: 1.1rem;
+
+		    		@include media($medium down) {
+		    			font-size: 0.9rem;
+		    			padding: 12px 10px;
+		    		}
+		    	}
 		    }
 
 		&__first {
@@ -71,8 +84,9 @@
 			max-width: 1300px;
 
 			> h1 {
-				font-size: 4.4rem;
+				font-size: 4.2rem;
 		    	color: $color--white;
+		    	font-weight: bold;
 		    	padding-left: 30px;
 		    	margin-bottom: 0;
 
@@ -135,5 +149,23 @@
 .main {
 	.other-pages {
 		padding-bottom: 20px;
+	}
+}
+
+.frontpage {
+	.main {
+		&-section {
+			&__eighth {
+				height: 500px !important;
+
+				@include media($large down) {
+					height: 631px !important;
+				}
+
+				.fp-tableCell {
+					height: auto !important;
+				}
+			}
+		}
 	}
 }

@@ -5,7 +5,21 @@
 	<link rel="stylesheet" type="text/css" href="./dist/bundle.css">
 	<script type="text/javascript" src="./js/jquery-3.2.1.min.js"></script>
 	<script type="text/javascript" src="./js/jquery.matchHeight.js"></script>
+	<script type="text/javascript" src="js/scrollreveal.min.js"></script>
 	<script type="text/javascript" src="./dist/bundle.js"></script>
+	 <script>
+      (function(){
+        var config = {
+          origin     : 'bottom',
+          viewFactor : 0.2,
+          duration   : 800,
+          distance   : "0px",
+          scale      : 0.97,
+          reset      : true,
+        }
+        window.sr = new ScrollReveal(config);
+      })()
+    </script>
 	<meta charset="utf-8"/>
 </head>
 <body>
@@ -55,33 +69,38 @@
 
 		<ul class="language-menu"> 
 			<li class="language-menu__active">lt</li>
-			<li>en</li>
+			<div>
+				<li>lt</li>
+				<li>en</li>
+				<li>ru</li>
+			</div>
 		</ul>
 	</nav>
 	<div class="main">
+		<div class="telephone-ask">
+			<p>Telefonas pasiteiravimui</p>
+			<p>+3706 41 65651</p>
+		</div>
 		<section class="main-section main-section__first other-pages">
-			<div class="telephone-ask">
-				<p>Telefonas pasiteiravimui</p>
-				<p>+3706 41 65651</p>
-			</div>
-
 			<div class="kontaktai isorinis">
 				<div class="isorinis__heading">
 					<h1>Susisiekite</h1>
 					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
 					<div class="other-pages__arrow">
-						<img src="./src/images/down-arrow-small.svg">
+						<a href="#">
+							<img src="./src/images/down-arrow-small.svg">
+						</a>
 					</div>
 				</div>
 				<div class="isorinis__info-blocks">
-					<div class="isorinis__info-blocks--first-line">
+					<div class="isorinis__info-blocks--first-line foo">
 						<h3>Klovima, UAB</h3>
 						<p class="picture location">Jovarų g.2, Kaunas, LT-24354</p>
 						<p class="paragraph-inline picture telephone">+370 3453346</p>
 						<p class="paragraph-inline picture telephone">+370 3453346</p>
 						<p class="picture email">info@klovima.lt</p>
 					</div>
-					<div class="isorinis__info-blocks--first-line">
+					<div class="isorinis__info-blocks--first-line foo">
 						<h3>Rekvizitai</h3>
 						<div>
 							<p><span class="span-strong">PVM mokėtojo kodas</span></p>
@@ -96,23 +115,23 @@
 							<p>LT203988954789327428947, Luminor AB</p>
 						</div>
 					</div>
-					<div class="isorinis__info-blocks--second-line">
+					<div class="isorinis__info-blocks--second-line foo">
 						<h3>Technikos nuoma</h3>
 						<p class="picture telephone">+370 3453346</p>
 						<p class="picture telephone">+370 3453346</p>
 					</div>
-					<div class="isorinis__info-blocks--second-line">
+					<div class="isorinis__info-blocks--second-line foo">
 						<h3>Technikos nuoma</h3>
 						<p class="picture telephone">+370 3453346</p>
 						<p class="picture email">info@klovima.lt</p>
 					</div>
-					<div class="isorinis__info-blocks--second-line">
+					<div class="isorinis__info-blocks--second-line foo">
 						<h3>Technikos nuoma</h3>
 						<p class="picture telephone">+370 3453346</p>
 						<p class="picture telephone">+370 3453346</p>
 					</div>
-					<div class="kontaktai__info-blocks--map">
-						<div style="width: 100%"><iframe width="100%" height="400" src="https://maps.google.com/maps?width=100%&amp;height=400&amp;hl=en&amp;coord=54.91072089999999, 23.842701000000034&amp;q=Jovar%C5%B3%20g.%202%2C%20Kaunas+(Klovima)&amp;ie=UTF8&amp;t=&amp;z=14&amp;iwloc=B&amp;output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"><a href="https://www.maps.ie/create-google-map/">Create Google Map</a></iframe></div><br />
+					<div class="isorinis__info-blocks--map">
+						<div class="foo" style="width: 100%"><iframe width="100%" height="400" src="https://maps.google.com/maps?width=100%&amp;height=400&amp;hl=en&amp;coord=54.91072089999999, 23.842701000000034&amp;q=Jovar%C5%B3%20g.%202%2C%20Kaunas+(Klovima)&amp;ie=UTF8&amp;t=&amp;z=14&amp;iwloc=B&amp;output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"><a href="https://www.maps.ie/create-google-map/">Create Google Map</a></iframe></div><br />
 					</div>
 				</div>
 			</div>
@@ -158,5 +177,8 @@
 			</footer>
 		</section>
 	</div>
+	<script>
+      sr.reveal('.foo');
+    </script>
 </body>
 </html>

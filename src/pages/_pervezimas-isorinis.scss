@@ -13,11 +13,13 @@
 	}
 
 	.isorinis {
+
 		&__info-block {
 			background-color: white;
 			padding: 20px 80px;
 
 			@include media($large down) {
+				margin: 0 10px;
 				padding: 20px 50px;
 			}
 
@@ -41,7 +43,7 @@
 
 				p {
 					font-size: 1.4rem;
-					color: $color--lightGrey;
+					font-weight: $fw-semibold;
 
 					@include media($large down) {
 						font-size: 1.2rem;
@@ -89,6 +91,9 @@
 		}
 
 		&__news-block {
+			@include media($large down) {
+				margin: 0 10px;
+			}
 
 			&--block {
 				@include simple-grid;

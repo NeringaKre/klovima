@@ -5,7 +5,21 @@
 	<link rel="stylesheet" type="text/css" href="./dist/bundle.css">
 	<script type="text/javascript" src="./js/jquery-3.2.1.min.js"></script>
 	<script type="text/javascript" src="./js/jquery.matchHeight.js"></script>
+	<script type="text/javascript" src="js/scrollreveal.min.js"></script>
 	<script type="text/javascript" src="./dist/bundle.js"></script>
+	 <script>
+      (function(){
+        var config = {
+          origin     : 'bottom',
+          viewFactor : 0.2,
+          duration   : 800,
+          distance   : "0px",
+          scale      : 0.97,
+          reset      : true,
+        }
+        window.sr = new ScrollReveal(config);
+      })()
+    </script>
 	<meta charset="utf-8"/>
 </head>
 <body>
@@ -19,7 +33,7 @@
 				<img src="./src/images/logo.png"/>
 			</a>
 		</div>
-		<ul class="header__menu">
+		<ul class="header__menu technika-menu">
 			<li>
 				<a href="#">Nuomojama technika</a>
 				<ul class="header__menu-second-level">
@@ -55,28 +69,34 @@
 
 		<ul class="language-menu"> 
 			<li class="language-menu__active">lt</li>
-			<li>en</li>
+			<div>
+				<li>lt</li>
+				<li>en</li>
+				<li>ru</li>
+			</div>
 		</ul>
 	</nav>
 	<div class="main">
+		<div class="telephone-ask">
+			<p>Telefonas pasiteiravimui</p>
+			<p>+3706 41 65651</p>
+		</div>
 		<section class="main-section other-pages heading-block">
-			<div class="telephone-ask">
-				<p>Telefonas pasiteiravimui</p>
-				<p>+3706 41 65651</p>
-			</div>
 			<div class="technikos-nuoma__header-img">
 				<div class="isorinis__heading">
 					<h1>Technikos nuoma</h1>
 					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod.</p>
 					<div class="other-pages__arrow2">
-						<img src="./src/images/down-arrow-white.svg">
+						<a href="#">
+							<img src="./src/images/down-arrow-white.svg">
+						</a>
 					</div>
 				</div>
 			</div>
 		</section>
 		<section class="main-section other-pages technika">
 			<div class="technikos-nuoma isorinis">
-				<div class="advantages-table">
+				<div class="advantages-table foo">
 					<div class="advantages-table__column first-column">
 						<h3>kombainų nuoma</h3>
 						<ul>
@@ -127,7 +147,7 @@
 					</div>
 					<button class="btn__red--big" type="button">Lorem ipsum dolor</button>
 				</div>
-				<div class="isorinis__info-block">
+				<div class="isorinis__info-block foo">
 					<div class="text-naujiena">
 						<p>naujiena!</p>
 					</div>
@@ -147,9 +167,6 @@
 			</div>
 		</section>
 
-
-		
-
 		<section class="main-section main-section__eighth" style="background-color: white;">
 			<footer>
 				<div class="footer__first">
@@ -166,7 +183,6 @@
 						<input class="footer__first--item" type="text" id="fname" name="email" placeholder="email@email.com">
 						<button class="footer__first--item btn__red--small" type="submit" name="email-button">Prenumeruoti</button>
 					</form>
-
 				</div>
 				<div class="footer__second">
 					<p>Esame „Kamida Group“ įmonių grupės dalis.</p>
@@ -189,5 +205,8 @@
 			</footer>
 		</section>
 	</div>
+	<script>
+      sr.reveal('.foo');
+    </script>
 </body>
 </html>

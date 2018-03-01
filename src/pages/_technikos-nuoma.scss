@@ -14,6 +14,11 @@
 	    background-image: url('../src/images/technikos-nuoma-pic.png');
 	    background-repeat: no-repeat;
 	    background-position: center;
+	    background-size: 100%;
+
+	    @include media(($full)+93px down) {
+	    	background-size: auto;
+	    }
 
 	    .isorinis__heading {
     	    position: absolute;
@@ -36,7 +41,7 @@
 	}
 
 	&.isorinis {
-		margin: 10px 0;
+		margin: 10px;
 
 		&__heading {
 			margin: auto;
@@ -61,9 +66,21 @@
 
 					li {
 						color: $color--greyOther;
-						font-weight: bold;
-						font-size: 1.1rem;
+						font-size: 1.05rem;
 						padding: 10px;
+						font-weight: $fw-semibold;
+
+						&:last-child {
+							@include media($medium up) {
+								height: 55px;
+							}
+						}
+
+						@include media($medium down) {
+							height: 50px;
+							display: flex;
+							align-items: center;
+						}
 
 						&:nth-child(2n-1) {
 							background-color: $color--lightestGrey;
@@ -174,6 +191,10 @@
 
 						@include media($medium down) {
 							padding: 20px 30px;
+							display: flex;
+						    align-items: center;
+						    justify-content: center;
+						    width: 100%;
 						}
 
 						@include media($small down) {
@@ -194,6 +215,12 @@
 						    background-position: center left 37%;
 						    position: relative;
 
+						    &:last-child {
+						    	@include media($medium up) {
+						    		padding: 18px;
+						    	}
+						    }
+
 						    @include media($full down) {
 								font-size: 1rem;
 							}
@@ -205,6 +232,7 @@
 							@include media($medium down) {
 								background-image: none;
 								font-size: 0.9rem;
+								justify-content: center;
 							}
 
 							@include media($small down) {
@@ -244,6 +272,10 @@
 
 						@include media($medium down) {
 							padding: 20px 30px;
+							display: flex;
+						    align-items: center;
+						    justify-content: center;
+						    width: 100%;
 						}
 
 						@include media($small down) {
@@ -262,6 +294,12 @@
 						    background-repeat: no-repeat;
 						    background-position: center left 38%;
 
+							&:last-child {
+						    	@include media($medium up) {
+						    		padding: 18px;
+						    	}
+						    }
+
 						    @include media($full down) {
 								font-size: 1rem;
 							}
@@ -273,6 +311,7 @@
 							@include media($medium down) {
 								background-image: none;
 								font-size: 0.9rem;
+								justify-content: center;
 							}
 
 							@include media($small down) {
@@ -289,11 +328,12 @@
     			background-repeat: no-repeat;
     			background-position: center right 25px;
     			background-color: $color--green;
-    			margin-left: 50%;
+    			margin-left: 49%;
 			    margin-top: 20px;
     			margin-bottom: 50px;
-			    font-size: 1.5rem;
+			    font-size: 1.4rem;
 			    padding: 15px 40px;
+			    font-weight: $fw-semibold;
 
     			&:hover {
     				background-color: darken($color--green,10%);
@@ -354,6 +394,7 @@
 				font-weight: bold;
 				vertical-align: middle;
 				padding: 0 30px 0 0;
+				font-weight: normal;
 
 				@include media ($large down) {
 					width: 100%;
@@ -365,7 +406,8 @@
 				}
 
 				p {
-					font-size: 1.2rem;
+					font-size: 1.1rem;
+					font-weight: $fw-semibold;
 					color: $color--lightGrey;
 
 					@include media($large down) {
@@ -418,7 +460,3 @@
 		}
 	}
 }
-
-// .technika {
-// 	background-image: url("../src/images/technikos-nuoma-pic.png");
-// }

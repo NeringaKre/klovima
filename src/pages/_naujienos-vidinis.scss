@@ -16,7 +16,7 @@
 		&__news-block {
 			> p {
 				font-size: 1.2rem;
-				font-weight: bold;
+				font-weight: $fw-semibold;
 
 				@include media($medium down) {
 					font-size: 1rem;
